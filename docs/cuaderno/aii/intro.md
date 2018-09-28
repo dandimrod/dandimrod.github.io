@@ -1,13 +1,17 @@
 ---
-id: intro
+id: intro-aii
 title: Introducción
-sidebar_label: Gestión de Equipo
+sidebar_label: Introducción
 ---
 
 Vicente Carrillo -> carrillo@us.es
+
 Despacho: F 1.64
-Tutorías:   L 10:30-13:30
-            X 10:30-13:30
+
+Tutorías:
+
+    L 10:30-13:30
+    X 10:30-13:30
 
 AII -> Apuntes en la web
 
@@ -20,20 +24,21 @@ Se valora el uso
 Python nuevo, no tiene casi nada que ver con lo que se da en IA.
 
 Herramientas:
-Crawling: Scrapy, Selenium
-Web scraping: Beautiful soup 
-Recuperación Información: Whoosh *no para big data*
-Sistemas de recomendación: Directamente en phyton
-Aplicación web: Django
-Aplicación escritorio: Trinter
-Sgbd: SQLite
+
+- Crawling: Scrapy, Selenium
+- Web scraping: Beautiful soup 
+- Recuperación Información: Whoosh *no para big data*
+- Sistemas de recomendación: Directamente en phyton
+- Aplicación web: Django
+- Aplicación escritorio: Trinter
+- Sgbd: SQLite
 
 Se hacen algunas prácticas en la hora de teoría 
 
-Asistencia prácticas 10% 
-Test 10%
-Prácticas laboratorio 60%
-Trabajo en grupo 20%
+    Asistencia prácticas 10% 
+    Test 10%
+    Prácticas laboratorio 60%
+    Trabajo en grupo 20%
 
 Prácticas 3 personas
 

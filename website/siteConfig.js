@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'dandimrod', // Title for your website.
-  tagline: 'It is all here',
+  title: '/dandimrod', // Title for your website.
+  tagline: '',
   url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -48,14 +48,14 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
+  headerIcon: '',
+  footerIcon: 'img/favicon.png',
   favicon: 'img/favicon.png',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#00e699',
-    secondaryColor: '#009966',
+    primaryColor: '#328f9a',
+    secondaryColor: '#19484d',
   },
 
   /* Custom fonts for website */
@@ -73,7 +73,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `${new Date().getFullYear()} dandimrod`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

@@ -3,8 +3,10 @@ id: asignaturas
 title: Asignaturas
 sidebar_label: Asignaturas
 ---
-[AII](aii/intro.md)
+[AII](cuaderno/aii/intro.md)
 
-[EGC](egc/intro.md)
+[EGC](cuaderno/egc/intro.md)
 
-[MSN](msn/intro.md)
+[MSN](cuaderno/msn/intro.md)
+
+[PGPI](cuaderno/pgpi/intro.md)

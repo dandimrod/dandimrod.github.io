@@ -6,5 +6,12 @@
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
+  },
+  "cuaderno":{
+    "Asigaturas":["cuaderno/asignaturas"],
+    "AII":["cuaderno/aii/intro-aii"],
+    "EGC":["cuaderno/egc/intro-egc","cuaderno/egc/tema1-egc"],
+    "MSN":["cuaderno/msn/intro-msn","cuaderno/msn/tema1-msn"],
+    "PGPI":["cuaderno/pgpi/intro-pgpi","cuaderno/pgpi/tema1-pgpi"]
   }
 }

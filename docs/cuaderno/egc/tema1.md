@@ -1,7 +1,7 @@
 ---
-id: tema1egc
-title: Gestión de Equipo
-sidebar_label: Gestión de Equipo
+id: tema1-egc
+title: Tema 1 - Gestión de Equipo
+sidebar_label: Tema 1
 ---
 
 ## ¿Qué es un equipo?
