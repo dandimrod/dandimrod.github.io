@@ -11,6 +11,7 @@
     "Asigaturas":["cuaderno/asignaturas"],
     "AII":["cuaderno/aii/intro-aii"],
     "EGC":["cuaderno/egc/intro-egc","cuaderno/egc/tema1-egc"],
+    "LI":["cuaderno/li/dedNatural-li"],
     "MSN":["cuaderno/msn/intro-msn","cuaderno/msn/tema1-msn"],
     "PGPI":["cuaderno/pgpi/intro-pgpi","cuaderno/pgpi/tema1-pgpi"]
   }
