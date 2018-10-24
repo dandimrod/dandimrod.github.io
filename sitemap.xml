@@ -13,4 +13,5 @@
 <url> <loc>https://your-docusaurus-test-site.com/docs/cuaderno/li/tabSemanticos-li</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/cuaderno/li/tabSemanticos-li" /> </url>
 <url> <loc>https://your-docusaurus-test-site.com/docs/cuaderno/msn/intro-msn</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/cuaderno/msn/intro-msn" /> </url>
 <url> <loc>https://your-docusaurus-test-site.com/docs/cuaderno/msn/tema1-msn</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/cuaderno/msn/tema1-msn" /> </url>
+<url> <loc>https://your-docusaurus-test-site.com/docs/cuaderno/msn/tema2-msn</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://your-docusaurus-test-site.com/docs/cuaderno/msn/tema2-msn" /> </url>
 </urlset>
