@@ -31,7 +31,7 @@ $$t_n=t_0+nh$$
 \\(y(t_i)\\) → valor exacto de la solución \\(y(t)\\) en \\(t_i\\)
 \\(y_i\\) → valor aproximado de la solución en \\(t_i\\)
 
-## Error
+## Errores
 
 $$ Error\ exacto\ en\ nodo\ t_i= |y(t_i)-y_i|$$
 Para ello necesitamos conocer la solución exacta en \\(y(t)\\)  
@@ -97,7 +97,7 @@ y(0)=0
 
 Solución exacta:
 
-$$\int y' = \int t^2 → \frac{t^3}{3}+C, C\in R$$
+$$\int y' = \int t^2 → \frac{t^3}{3}+C, C\in \mathbb{R}$$
 $$ y(0)=\frac{0^3}{3}+C=C=0$$
 
 |\\(i\\)|\\(t_i\\)|\\(y_i\\)|\\(y_i\ exacto\\)|\\(error\ exacto\\)|
@@ -106,7 +106,7 @@ $$ y(0)=\frac{0^3}{3}+C=C=0$$
 |\\(1\\)|\\(\frac{1}{2}\\)|\\(0+\frac{1}{2}\cdot f(0,0)=0\\)|\\(0.0416\\)|\\(0.0416\\)|
 |\\(2\\)|\\(1\\)|\\(0+\frac{1}{2}\cdot f(\frac{1}{2},0)=\frac{1}{8}\\)|\\(0.333\\)|\\(0.208\\)|
 |\\(3\\)|\\(\frac{3}{2}\\)|\\(\frac{1}{8}+\frac{1}{2}\cdot f(1,\frac{1}{8})=\frac{5}{8}\\)|\\(1.125\\)|\\(0.5\\)|
-|\\(4\\)|\\(2\\)|\\(\frac{5}{8}+\frac{1}{2}\cdot f(\frac{3}{2},\frac{5}{8})=\frac{7}{4}\\)|\\(2.666\\)|\\(.9166\\)|
+|\\(4\\)|\\(2\\)|\\(\frac{5}{8}+\frac{1}{2}\cdot f(\frac{3}{2},\frac{5}{8})=\frac{7}{4}\\)|\\(2.666\\)|\\(0.9166\\)|
 
 ### Cota de error par el método de Euler
 
@@ -118,7 +118,7 @@ y(a)=\alpha
 
 Sea \\(y(t)\\) la solución exavta del PV, definida en I y sea M y L dos constantes tales que
 
-$$|\frac{\delta f}{\delta y}|  \geq  L,\ para\ t\in (a,b), y\in R$$
+$$|\frac{\delta f}{\delta y}|  \geq  L,\ para\ t\in (a,b), y\in \mathbb{R}$$
 $$|y''(t)| \geq M,\ para\ t\in (a,b)$$
 $$|y(t_i)-y_i| \geq  \frac{h\cdot M}{2L}(e^{L\cdot (t_i-a)}-1)$$
 Esta es la cota de error.
@@ -145,3 +145,4 @@ $$Dado\ I=(0,2)$$
 $$|y''(t)|=|2|+|0.5\cdot e^2|=M$$
 - Calculamos la cota del error
   $$|y(t_i)-y_i| \geq  \frac{0.2\cdot (0.5\cdot e^2)}{2\cdot 1}(e^{1\cdot (t_i-a)}-1)$$
+
