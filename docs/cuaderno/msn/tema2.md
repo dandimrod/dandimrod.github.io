@@ -65,6 +65,8 @@ y_0=\alpha
 y_{i+1}=y_i+h\cdot f(t_i,y_i)
 \\end{matrix}\\right.$$
 
+<div style="background-color:#c5e8ec">
+
 Ejemplo:
 
 $$PVI\\left\\{\\begin{matrix} 
@@ -100,6 +102,8 @@ Solución exacta:
 $$\int y' = \int t^2 → \frac{t^3}{3}+C, C\in \mathbb{R}$$
 $$ y(0)=\frac{0^3}{3}+C=C=0$$
 
+<div style="margin: auto; text-align: center;">
+
 |\\(i\\)|\\(t_i\\)|\\(y_i\\)|\\(y_i\ exacto\\)|\\(error\ exacto\\)|
 |-|-|-|-|-|
 |\\(0\\)|\\(0\\)|\\(0\\)|\\(0\\)|\\(0\\)|
@@ -107,6 +111,9 @@ $$ y(0)=\frac{0^3}{3}+C=C=0$$
 |\\(2\\)|\\(1\\)|\\(0+\frac{1}{2}\cdot f(\frac{1}{2},0)=\frac{1}{8}\\)|\\(0.333\\)|\\(0.208\\)|
 |\\(3\\)|\\(\frac{3}{2}\\)|\\(\frac{1}{8}+\frac{1}{2}\cdot f(1,\frac{1}{8})=\frac{5}{8}\\)|\\(1.125\\)|\\(0.5\\)|
 |\\(4\\)|\\(2\\)|\\(\frac{5}{8}+\frac{1}{2}\cdot f(\frac{3}{2},\frac{5}{8})=\frac{7}{4}\\)|\\(2.666\\)|\\(0.9166\\)|
+
+</div>
+</div>
 
 ### Cota de error par el método de Euler
 
@@ -123,6 +130,7 @@ $$|y''(t)| \geq M,\ para\ t\in (a,b)$$
 $$|y(t_i)-y_i| \geq  \frac{h\cdot M}{2L}(e^{L\cdot (t_i-a)}-1)$$
 Esta es la cota de error.
 
+<div style="background-color:#c5e8ec">
 Ejemplo:
 
 $$PVI\\left\\{\\begin{matrix} 
@@ -145,4 +153,17 @@ $$Dado\ I=(0,2)$$
 $$|y''(t)|=|2|+|0.5\cdot e^2|=M$$
 - Calculamos la cota del error
   $$|y(t_i)-y_i| \geq  \frac{0.2\cdot (0.5\cdot e^2)}{2\cdot 1}(e^{1\cdot (t_i-a)}-1)$$
+</div>
 
+
+## Otros métodos
+
+### Métodos de orden superior:
+
+- Método de Runge-Kutta de orden 2 → \\(|y(t_i)-y_i|<=c\cdot h^2\\)
+- Método de Runge-Kutta de orden 4 → \\(|y(t_i)-y_i|<=c\cdot h^4\\)
+
+### Métodos multiplicativos
+
+- orden 2 → Se necesita inicializar \\(y_0\\) e \\(y_1\\) usando por ejemplo el método de Heun
+- orden 4 → Se necesita inicializar \\(y_0\\), \\(y_1\\), \\(y_2\\) e \\(y_3\\) usando por ejemplo el método de Runge-Kutta de orden 4

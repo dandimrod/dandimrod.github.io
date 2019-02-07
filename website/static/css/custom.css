@@ -14,3 +14,9 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+table{
+    background-color:white;
+    overflow-x: initial;
+    
+}
