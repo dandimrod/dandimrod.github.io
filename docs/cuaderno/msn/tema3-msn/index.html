@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Tema 3 - Ecuaciones Diferenciales de Orden Superior · /dandimrod</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introducción"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Tema 3 - Ecuaciones Diferenciales de Orden Superior · /dandimrod"/><meta property="og:type" content="website"/><meta property="og:url" content="https://dandimrod.github.io/index.html"/><meta property="og:description" content="## Introducción"/><meta property="og:image" content="https://dandimrod.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://dandimrod.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://dandimrod.github.io/blog/atom.xml" title="/dandimrod Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://dandimrod.github.io/blog/feed.xml" title="/dandimrod Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="/js/noise.js"></script><script type="text/javascript" src="/js/footer.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">/dandimrod</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/projects/projects" target="_self">Projects</a></li><li class=""><a href="/about" target="_self">About me</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>MSN</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Asigaturas</h3><ul><li class="navListItem"><a class="navItem" href="/docs/cuaderno/asignaturas">Asignaturas</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">AII</h3><ul><li class="navListItem"><a class="navItem" href="/docs/cuaderno/aii/intro-aii">Introducción</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">LI</h3><ul><li class="navListItem"><a class="navItem" href="/docs/cuaderno/li/dedNatural-li">Dedución Natural</a></li><li class="navListItem"><a class="navItem" href="/docs/cuaderno/li/tabSemanticos-li">Tableros Semánticos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">MSN</h3><ul><li class="navListItem"><a class="navItem" href="/docs/cuaderno/msn/intro-msn">Introducción</a></li><li class="navListItem"><a class="navItem" href="/docs/cuaderno/msn/tema1-msn">Tema 1</a></li><li class="navListItem"><a class="navItem" href="/docs/cuaderno/msn/tema2-msn">Tema 2</a></li><li class="navListItem"><a class="navItem" href="/docs/cuaderno/msn/parcial1-msn">Parcial 1</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/cuaderno/msn/tema3-msn">Tema 3</a></li><li class="navListItem"><a class="navItem" href="/docs/cuaderno/msn/tema4-msn">Tema 4</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Tema 3 - Ecuaciones Diferenciales de Orden Superior</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduccion"></a><a href="#introduccion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introducción</h2>
+<p>\(t\) → variable independiente<br>
+\(y(t)\) → variable dependiente
+\(y'(t)\) e \(y''(t\) → 1ª y 2ª derivadas de \(y(t)\)</p>
+<p>Entonces:</p>
+<p>$$y''(t)=f(t, y(t), y'(t))$$</p>
+<div style="background-color:#c5e8ec">
+Ejemplos:
+<p>$$y''= sen(t) + 3y + (y')^2$$
+$$y''+ty'+sen(t)\cdot y = e^t$$</p>
+</div>
+<h2><a class="anchor" aria-hidden="true" id="solucion-general-de-una-edo-de-orden-2"></a><a href="#solucion-general-de-una-edo-de-orden-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Solución general de una EDO de orden 2</h2>
+<p>Una función \(y(t)\) se dice que es solución de una EDO de orden 2 en un intervalo \(I\) si:</p>
+<ol>
+<li>\(y(t)\), \(y'(t)\) e \(y''(t)\) están definidas en \(I\)</li>
+<li>\(y(t)\) cumple la igualdad, es decir, \(y''(t)=f(t, y(t), y'(t))\) para todo \(I\)</li>
+</ol>
+<div style="background-color:#c5e8ec">
+Ejemplo:
+<p>Demostrar que la función \(y(t)=2 sen(t) -1/3 \cdot cos(2t) \)es solución de \(y''+y=cos(2t)\)</p>
+<p>$$y'(t)=2cos(t) + \frac{2}{3} sen(2t)$$
+$$y''(t)=-2 sen(t)+ \frac{4}{3} cos(2t)$$</p>
+<ol>
+<li>\(y(t)\), \(y'(t)\) e \(y''(t)\) están definidas para todo \(\mathbb{R}\)</li>
+<li>\(y''(t)+y(t)=cos(2t)\)</li>
+</ol>
+<p>$$-2 sen(t)+ \frac{4}{3}\cdot cos(2t)+ 2sen(t)-\frac{1}{3}\cdot cos(2t)= cos(2t)$$</p>
+</div>
+<p>\(y''(t)=f(t, y(t), y'(t))\) → solución general y(t,c_1,c_2) siendo C_1 y c_2 constantes</p>
+<h3><a class="anchor" aria-hidden="true" id="edo-de-orden-2-lineales"></a><a href="#edo-de-orden-2-lineales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>EDO de orden 2 lineales</h3>
+<p>$$a(t)\cdot y''+b(t)\cdot y'+c(t)\cdot y=d(t)$$</p>
+<p>En particular, nos vamos a centrar en las EDO de orden 2 <strong>Lineales de coeficientes constantes:</strong></p>
+<p>$$a\cdot y''+b\cdot y'+c\cdot y=d(t) \ a,b,c \in \mathbb{R}$$</p>
+<div style="background-color:#c5e8ec">
+<p>Ejemplo:</p>
+<p>$$y''+e^t\cdot y'+2y=sen(t)→EDO\ de\ orden\ 2\ lineal$$
+$$2y''-y'=e^t→EDO\ de\ orden\ 2\ linal\ de\ coeficientes\ constantes$$</p>
+</div>
+<p>$$a\cdot y''+b\cdot y'+c\cdot y=d(t)$$</p>
+<p>Solución general: \(y(t,c_1,c_2)=y_H(t,c_1,c_2)+y_p(t)\)<br>
+Siendo:</p>
+<p>\(y_H(t,c_1,c_2)\) → solución general de la EDO homogénea \(ay''+by'+cy=0\)
+\(y_p(t)\)  → Solución particular de la EDO completa por el <strong>Método de los coeficientes indeterminados</strong></p>
+<h4><a class="anchor" aria-hidden="true" id="solucion-general-de-la-edo-de-orden-2-lineal-homogenea"></a><a href="#solucion-general-de-la-edo-de-orden-2-lineal-homogenea" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Solución general de la EDO de orden 2 lineal homogénea</h4>
+<p>Se trata de buscar un <strong>sistema fundamental de soluciones:</strong> es decir, un conjunto de 2 soluciones \(y_1(t)\) e \(y_2(t)\) que constituyan una base del conjuto de todas las soluciones</p>
+<p>De forma que, la solución general de la EDO homogénea se va expresar como combinación lineal de \(y_1(t)\) e \(y_2(t)\)</p>
+<p>$$y_H(t,c_1,c_2)=c_1y_1(t)+c_2y_2(t)$$</p>
+<p>¿Cómo obtener las soluciones \(y_1(t)\) e \(y_2(t)\) del s.f.s?</p>
+<ol>
+<li>Calcular el <strong>polinomio caracterísitco</strong> asociado a la EDO a(t)\cdot y''+b(t)\cdot y'+c(t)\cdot y=0</li>
+</ol>
+<p>$$p(r)=a\cdot r^2+b\cdot r + c$$</p>
+<ol start="2">
+<li>Calcular las raíces de \(p(r)=0\)</li>
+</ol>
+<p><strong>Caso 1:</strong> Dos raíces simples \(r_1\) y \(r_2\) → \(s.f.s ={y_1(t)=e^{r_1t}+y_2(t)=e^{r_2t}}\)</p>
+<p>Luego, \(y_H(t,c_1,c_2)=c_1e^{r_1t}+c_2e^{r_2t}\)</p>
+<p><strong>Caso 2:</strong> Una raíz doble \(r → s.f.s.={y_1(t)=e^{rt},y_2(t)=e^{rt}}\)</p>
+<p>Luego, \(y_H(t,c_1,c_2)=c_1e^{rt}+c_2e^{rt}\)</p>
+<p>// caso 3 buscar ostia puta</p>
+<div style="background-color:#c5e8ec">
+Ejemplo: 
+$$y''+3y'+2y=3t+1$$
+<p>$$y_H(t,c_1,c_2) =\ Solución\ general\ de\ y''+3y' +2 y=0$$</p>
+<p>Polinomio característico:</p>
+<p>$$p(r)=r^2+3r+2$$</p>
+<p>Raíces de \(P(r)=0\):
+$$r=\frac{-3\pm\sqrt{9-4\cdot 2}}{2}=\frac{-3\pm1}{2}→r_1=-1\ r_2=-2$$</p>
+<p>$$y_H(t,c_1,c_2)=c_1e^{-t}+c_2e^{-2t}$$</p>
+</div>
+<h4><a class="anchor" aria-hidden="true" id="metodo-de-los-coeficientes-indererminados"></a><a href="#metodo-de-los-coeficientes-indererminados" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Método de los coeficientes indererminados</h4>
+<h5><a class="anchor" aria-hidden="true" id="caso-1"></a><a href="#caso-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Caso 1</h5>
+<p>$$ay''+by'+cy=b(t)$$
+La forma de la solución particular \(y_p(t)\) va a depender de la forma que tenga el término independiente de \(b(t)\).</p>
+<ul>
+<li>Si \(b(t)= p_n(t)\cdot e^{rt}\) (Siendo \(p_n\) un polinomio de grado \(n\))→\(y_p(t)= t^s \cdot q_n(t)\cdot e^{rt}\), donde \(s=\left\{\begin{matrix}
+0\ si\ r\ no\ es\ raiz\ de\ p(r)=0
+\\
+1\ si\ r\ es\ raiz\ simple\ de\ p(r)=0
+\\
+2\ si\ r\ es\ raiz\ doble\ de\ p(r)=0
+\end{matrix}\right.\)</li>
+</ul>
+<div style="background-color:#c5e8ec">
+Ejemplo:
+<p>$$y''+3y'+2y=3t+1 → y_H(t,c_1,c_2)=c_1e^{-t}+c_2e^{-2t}$$</p>
+<p>$$b(t)=3t+1=(3r+1)\cdot e^{0\cdot t}$$</p>
+<p>y_p=t^3\cdot q_1(t)\cdot e^{0t}=t^0 \cdot (At+B)\cdot e^{0t}=At+B</p>
+<p>s=0 ya que r=0 no es raíz de p(r)=0</p>
+<p>Imponemos que y_p(t) =At+B sea la soluciónde la EDO completa y''+3y'+2y=3t+1 , es decir:
+$$y_p''(t)+3y_p'(t)+2y_p(t)=3t+1$$</p>
+<p>$$0+3A+2(At+B)=3t+1$$
+$$3A+2At+2B=3t+1$$</p>
+<p>$$\left\{\begin{matrix}
+2A=B → A=\frac{3}{2}
+\\
+3A+2B=1 → \frac{9}{2}+2B=1 → B=\frac{-7}{4}
+\end{matrix}\right.$$</p>
+<p>$$y_p(t)=\frac{3}{2} t- \frac{-7}{4}$$</p>
+</div>
+<div style="background-color:#c5e8ec">
+Ejemplo:
+<p>$$y''-y=2-t^2$$</p>
+<p>$$(H)\ p(r)=r^2-1=0 → r_1=1 r_2=-1 → y_H(t,c_1,c_2)=c_1e^{t}+c_2e^{-t}$$
+$$(NH)\ y''-y=2-t^2\ b(t)=(2-t^2)\cdot e^{0t} → y_p(t)= t^0\cdot (At^2 + Bt+C)\cdot e^{0t} = At^3+Bt+C$$</p>
+<p>$$y_p'(t)=2At+B$$
+$$y_p''(t)=2A$$
+$$y''(t)-y_p(t)=2-t^2$$
+$$2A-(At^2+Bt+C)=2-t^2$$
+$$-At^2-Bt+2A-C=2-t^2$$
+$$-A=-1 → A=1$$
+$$-B=0 → B=0$$
+$$2A-C=2 → C=0$$
+$$y_p(t)=t^2$$</p>
+</div>
+<h5><a class="anchor" aria-hidden="true" id="caso-2"></a><a href="#caso-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Caso 2</h5>
+<p>$$b(t)= p_n(t)\cdot e^{\alpha t} cos(\beta t)+ q_m(t)\cdot e^{r\alpha} sen(\beta t)$$</p>
+<p>$$ y_p(t)= t^s(P_N(t)e^{\alpha t} cos(\beta t)+Q_N(t)\cdot e^{r\alpha} sen(\beta t))\ con\ N=max{n,m}$$</p>
+<p>$$s=\left\{\begin{matrix}
+0\ si\ \alpha \pm \beta \cdot i\ no\ es\ raiz\ compleja\ de\ p(r)=0
+\\
+1\ si\ \alpha \pm \beta \cdot i\ es\ raiz\ compleja\ de\ p(r)=0
+\end{matrix}\right.$$</p>
+<div style="background-color:#c5e8ec">
+Ejemplo:
+<p>$$y''+3y'+2y=5 sen(t) → y_H(t,c_1,c_2)=c_1e^{-t}+c_2e^{-2t}$$</p>
+<p>$$b(t)= E\cdot sen(t)= D\cdot e^{0t}\cdot cos(t)+5\cdot e^{0t}\cdot sen(t)$$</p>
+<p>$$y_p=t^0(Ae^{0t}\cdot cos(t) + B\cdot e^{0t} \cdot sen(t))$$</p>
+<p>Ya que \(\alpha \pm \beta i \) no es raíz de \(p(r)=0\)</p>
+<p>$$y_p(t)=Acos(t)+Bsen(t)$$
+$$y_p'(t)=-Asen(t)+Bcos(t)$$
+$$y_p''(t)=-Asen(t)-Bcos(t)$$</p>
+<p>$$-Acos(t)-Bsen(t)+3(-Asen(t)+Bcos(t))+2(-Asen(t)-Bcos(t))=5sen(t)$$</p>
+<p>$$(-a+3B+2A)cos(t)+(-B-3A+2B)sen(t)=5sen(t)$$</p>
+<p>$$\left\{\begin{matrix}
+3B+A=0
+\\
+B-3A=5
+\end{matrix}\right.$$</p>
+<p>$$A=\frac{-3}{2},\ B=\frac{1}{2}→y_p(t)=\frac{-3}{2}cos(t)+\frac{1}{2}sen(t)$$</p>
+<p>$$y(t,c_1,c_2)=c_1e^{-t}+c_2e^{-2t}-\frac{3}{2}cos(t)+\frac{1}{2}sen(t)$$</p>
+</div>
+<h5><a class="anchor" aria-hidden="true" id="caso-3"></a><a href="#caso-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Caso 3</h5>
+<p>Principio de superposición</p>
+<p>$$ay''+by'+cy=b_1(t)+b_2(t)$$</p>
+<div style="background-color:#c5e8ec">
+Ejemplo:
+<p>$$y''+3y'+2y=3t+1+5\cdot sen(t)$$
+La parte \(b_1(t)\) corresponde al caso 1 y \(b_2(t)\) corresponde al caso 2</p>
+</div>
+<p>$$(H)\ ay''+by'+cy=0\ →\ Solución\ general y_H(b,c_1,c_2)$$
+$$(NH_1)\  ay''+by'+cy=b_1(t)\ →\ y_{p_1}(t)$$
+$$(NH_2)\  ay''+by'+cy=b_2(t)\ →\ y_{p_2}(t)$$</p>
+<p>Solución de la EDO completa:</p>
+<p>$$ay''+by'+cy=b_1(t)+b_2(t)$$</p>
+<p>Viene dada por:</p>
+<p>$$y(b,c_1,c_2)=y_H(b,c_1,c_2)+y_p(t)$$
+$$y(b,c_1,c_2)=y_H(b,c_1,c_2)+y_{p_1}(t)+y_{p_2}(t)$$</p>
+<div style="background-color:#c5e8ec">
+Ejemplo:
+<p>$$y''+3y'+2y=3t+1+5\cdot sen(t)$$</p>
+<p>$$(H)\ p(r)=r^2+3r+2=0 → r_1=-2 r_2=-1 → y_H(t,c_1,c_2)=c_1e^{-2t}+c_2e^{-t}$$
+$$(NH_1)\ y''+3y'+2y=3t+1\ → y_{p_1}(t)=\frac{3}{2}t-\frac{7}{4}$$
+$$(NH_2)\ y''+3y'+ 2y=5sen(t)\ → y_{p_2}(t)=-\frac{2}{2}cos(t)+\frac{1}{2}sen(t)$$
+$$y(t,c_1,c_2)=c_1e^{-2t}+c_2e^{-t}+\frac{3}{2}t-\frac{7}{4}-\frac{2}{2}cos(t)+\frac{1}{2}sen(t)$$</p>
+</div>
+<h2><a class="anchor" aria-hidden="true" id="probleman-de-valores-iniciales-asociadas-a-edo-de-orden-2"></a><a href="#probleman-de-valores-iniciales-asociadas-a-edo-de-orden-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Probleman de Valores iniciales asociadas a EDO de orden 2:</h2>
+<p>$$(PVI)\left\{\begin{matrix}
+y''=f(t,y(t),y'(t))
+\\
+y(t_0)=\alpha _0,\ y'(t_0)=\alpha _1
+\end{matrix}\right.$$</p>
+<div style="background-color:#c5e8ec">
+Ejemplo:
+<p>$$(PVI)\left\{\begin{matrix}
+y''+2y'+y=t^2
+\\
+y(0)=0,\ y'(0)=0
+\end{matrix}\right.$$</p>
+<p>Siendo la solución general de la EDO:
+$$y(t,c_1,c_2)=c_1e^{-t}+c_2e^{-t}+t^2-4t+6$$</p>
+<p>Solución del PVI:
+Imponemos las condiciones:</p>
+<p>$$y(0)=0 → c_1+6=0 → c_1=-6$$</p>
+<p>$$y'(0)=0 → c_1+c_2=-4 → c_2=-2$$</p>
+<p>Por lo tanto:</p>
+<p>$$y(t)=-6e^{-t}-2e^{-t}+t^2-4t+6$$</p>
+</div>
+<h2><a class="anchor" aria-hidden="true" id="metodos-numericos-asociados-a-las-edo-de-orden-2"></a><a href="#metodos-numericos-asociados-a-las-edo-de-orden-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Métodos Numéricos asociados a las EDO de orden 2</h2>
+<p>$$(PVI)\left\{\begin{matrix}
+y''=f(t,y(t),y'(t))
+\\
+y(t_0)=\alpha _0,\ y'(t_0)=\alpha _1
+\end{matrix}\right.$$</p>
+<p>$$I=(a,b)$$
+$$a\leq t\leq b$$
+$$t_0\hspace{15mm} t_1\hspace{15mm} t_2\hspace{15mm} t_3\hspace{15mm} ...\hspace{15mm} t_n$$
+$$|--------------------|$$
+$$a\hspace{95mm} b$$</p>
+<p>$$y_n=aproximación\ de\ y(t_n)$$</p>
+<p>Hacemos un cambio de variable: \(v=y'\)</p>
+<p>Obtenemos 2 PVI asociados a EDO de orden 1</p>
+<p>$$(PVI)_1\left\{\begin{matrix}
+y'(t)=v(t)
+\\
+y(t_0)=\alpha _0
+\end{matrix}\right.$$</p>
+<p>$$(PVI)_2\left\{\begin{matrix}
+v'(t)=f(t,y(t),v(t))
+\\
+v(t_0)=\alpha _1
+\end{matrix}\right.$$</p>
+<p>Método de Euler</p>
+<p>$$Euler_1\left\{\begin{matrix}
+y_0=\alpha <em>0
+\\
+y</em>{n+1}=y_n+h \cdot v_n
+\end{matrix}\right.$$</p>
+<p>$$$$</p>
+<p>$$(Euler)_2\left\{\begin{matrix}
+v_0=\alpha <em>1
+\\
+v</em>{n+1}=v_n+h\cdot f(t_n,y_n,v_n)
+\end{matrix}\right.$$</p>
+<p>$$Esquema\ general \left\{\begin{matrix}
+Conocidos\ \alpha <em>0\ y\ alpha_1
+\\
+y</em>{n+1}=y_n+h\cdot v_n
+\\
+v_{n+1}=v_n+h\cdot f(t_n,y_n,v_n)
+\end{matrix}\right.$$</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/cuaderno/msn/parcial1-msn"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/cuaderno/msn/tema4-msn"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#introduccion">Introducción</a></li><li><a href="#solucion-general-de-una-edo-de-orden-2">Solución general de una EDO de orden 2</a><ul class="toc-headings"><li><a href="#edo-de-orden-2-lineales">EDO de orden 2 lineales</a></li></ul></li><li><a href="#probleman-de-valores-iniciales-asociadas-a-edo-de-orden-2">Probleman de Valores iniciales asociadas a EDO de orden 2:</a></li><li><a href="#metodos-numericos-asociados-a-las-edo-de-orden-2">Métodos Numéricos asociados a las EDO de orden 2</a></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.png" alt="/dandimrod" width="66"/></a><div><h5>My sites</h5><a href="/en/about.html">About me</a><a href="https://stackoverflow.com/users/9198801/daniel-diment" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://www.linkedin.com/in/daniel-diment-rodriguez/">LinkedIn</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/dandimrod">GitHub</a></div></section><section class="copyright">2019 dandimrod</section></footer><canvas id="footer-canvas" class="footer-canvas"></canvas></div></div></body></html>
