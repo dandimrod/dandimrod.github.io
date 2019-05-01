@@ -4,5 +4,8 @@
     "AII":["cuaderno/aii/intro-aii"],
     "LI":["cuaderno/li/dedNatural-li","cuaderno/li/tabSemanticos-li"],
     "MSN":["cuaderno/msn/intro-msn","cuaderno/msn/tema1-msn","cuaderno/msn/tema2-msn","cuaderno/msn/parcial1-msn","cuaderno/msn/tema3-msn","cuaderno/msn/tema4-msn"]
+  },
+  "projects":{
+    "Projects":["projects/projects"]
   }
 }

@@ -15,8 +15,11 @@
 @media only screen and (min-width: 1500px) {
 }
 
-table{
-    background-color:white;
-    overflow-x: initial;
-    
+.nav-footer{
+    padding-top:12em;
+    background-color: transparent;
+}
+.footer-canvas{
+    position: absolute;
+    bottom: 0;
 }

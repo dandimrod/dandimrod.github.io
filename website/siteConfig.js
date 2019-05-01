@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
   title: '/dandimrod', // Title for your website.
   tagline: '',
-  url: 'https://your-docusaurus-test-site.com', // Your website URL
+  url: 'https://dandimrod.github.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -38,10 +38,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'cuaderno/asignaturas', label: 'Asignaturas'},
+    {doc: 'projects/projects', label: 'Projects'},
     // {doc: 'doc4', label: 'API'},
-    // {page: 'help', label: 'Help'},
-    // {blog: true, label: 'Blog'},
+     {page: 'about', label: 'About me'},
+     {blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:
@@ -81,7 +81,7 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js',"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"],
+  scripts: ['https://buttons.github.io/buttons.js',"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML","/js/noise.js","/js/footer.js"],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',

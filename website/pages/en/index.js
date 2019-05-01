@@ -122,8 +122,10 @@ const FeatureCallout = () => (
   <div
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
+    <h2>Content</h2>
+    <a href="/docs/projects/projects">Here you can see my latests projects</a>
+    <br/>
+    <a href="/about.html">Here you can see my resume</a>
   </div>
 );
 
@@ -144,10 +146,10 @@ const TryOut = () => (
   <Block id="try">
     {[
       {
-        content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'left',
-        title: 'Try it Out',
+        content: 'I\'m a Software Engineering Student at University of Seville and this is my webpage',
+        image: imgUrl('profile.jpg'),
+        imageAlign: 'top',
+        title: 'Hello my name is Daniel Diment Rodríguez',
       },
     ]}
   </Block>
@@ -199,12 +201,12 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          {/* <Features />
-          <FeatureCallout />
-          <LearnHow />
           <TryOut />
+          <FeatureCallout />
+          {/* <Features />
+          <LearnHow />
           <Description />
-          <Showcase language={language} /> */}
+          <Showcase language={language} />  */}
         </div>
       </div>
     );
