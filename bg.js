@@ -1,6 +1,5 @@
 
     var canvas;
-    var parent;
     function distance(x1, y1, x2, y2) {
         const xdist = x2 - x1;
         const ydist = y2 - y1;
@@ -9,13 +8,6 @@
     function getRandomInt(ranNum, max, min){
         return Math.floor(Math.floor(ranNum * (max - min+1) ) + min);
     }
-    function interpolate(pa, pb, px) {
-                    var ft = px * Math.PI,
-                        f = (1 - Math.cos(ft)) * 0.5;
-                    return pa * (1 - f) + pb * f;
-    }
-
-
     function Circle() {
         var circle = {};
         let colors = ["#c5e9ed","#d8f0f3","#9dd9e1","#8ad2db"];
@@ -92,108 +84,6 @@
         };
     }
 
-    function Mist(){
-        let mist={
-            seed:Math.random(),
-            currentCol:0,
-            velocity:0.2,
-            wavelength:400,
-            amplitude:100,
-            resolution:20,
-            height:(canvas.height*4)/7,
-            radius:50000,
-            buffer:[],
-            getHeight:function(col){
-                noise.seed(this.seed);
-                let height;
-                if (!this.buffer[col]) {
-                    let a = this.getPoint(col, 0, this.seed);
-                    let b = this.getPoint(col, 1, this.seed);
-                    if (col < 0) {
-                        if ((col % this.radius) % this.wavelength === 0) {
-                            height = this.height + a * this.amplitude;
-                        } else {
-                            height = this.height + interpolate(a, b, ((Math.abs(col) % this.radius) % this.wavelength) /
-                                this.wavelength) * this.amplitude;
-                        }
-                    }
-                    if ((col % this.radius) % this.wavelength === 0) {
-                        height = this.height + a * this.amplitude;
-                    } else {
-                        height = this.height + interpolate(a, b, ((col % this.radius) % this.wavelength) /
-                            this.wavelength) * this.amplitude;
-                    }
-                    this.buffer[col] = height
-                } else {
-                    height = this.buffer[col];
-                }
-                return height
-            },
-            getPoint: function (col, shift, seed, test) {
-                let a = (Math.floor((col % this.radius) / this.wavelength));
-                let b = 0;
-                let next;
-                noise.seed(seed);
-                if (a === Math.floor(this.radius / this.wavelength)) {
-                    b = 0;
-                    next = true;
-                } else {
-                    b = a + 1;
-                    next = false;
-                }
-                if (test === true) {
-                    return {
-                        a,
-                        b,
-                        next,
-                        result: {
-                            a: noise.simplex2(0, a),
-                            b: noise.simplex2(0, b)
-                        }
-                    };
-                }
-                if (shift === 0) {
-                    return noise.simplex2(1, a);
-                } else {
-                    return noise.simplex2(1, b);
-                }
-            },
-            update: function () {
-                let mistZone=[];
-                for (let index = 0; index < canvas.width/this.resolution; index++) {
-                    mistZone[index]=this.getHeight(index+this.currentCol);
-                }
-                this.currentCol=this.currentCol+this.velocity;
-                if(window.innerWidth<=736){
-                    this.height=(canvas.height*3)/10;
-                }else{
-                    this.height=(canvas.height*4)/7;
-                }
-                this.draw(mistZone);
-            },
-            draw:function(mistZone){
-                c.save();
-                c.fillStyle="#FFFFFF"
-                c.beginPath();
-                c.moveTo(-400,0);
-                for (let index = 0; index < mistZone.length; index++) {
-                    const element = mistZone[index];
-                    c.lineTo(index*this.resolution,element)
-                }
-                c.lineTo(canvas.width+300,mistZone[mistZone.length-1])
-                c.lineTo(canvas.width,0)
-                c.closePath();
-                c.shadowColor = '#FFFFFF';
-                c.shadowBlur = 150;
-                c.shadowOffsetX = -75;
-                c.shadowOffsetY = 150;
-                c.fill();
-                c.restore();
-            }
-        };
-        return mist;
-    }
-
     function Background(){
         let background={};
         background.color="#63c2cf";
@@ -219,22 +109,22 @@
             const element = circles[index];
             drawingPile.push(element);
         }
-        drawingPile.push(mist);
     };
-    // canvas.style.position="fixed";
-    // canvas.style.top="0px";
-    // canvas.style.left="0px";
     window.onload=function(){
         start();
     };
     function start(){
-        canvas = document.getElementById("footer-canvas");
+        canvas = document.getElementById("bg");
         canvas.style.zIndex=-99999999;
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.style.position="absolute";
+        canvas.style.top="0px";
+        canvas.style.left="0px";
+        canvas.style.height = "100%";
+        canvas.style.width = "100%";
+        canvas.width  = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
         c = canvas.getContext("2d");
         background=new Background();
-        mist = new Mist();
         for (let index = 0; index < 20; index++) {
             let circle = new Circle();
             circle.init();
@@ -242,8 +132,10 @@
         };
         // Canvas resizing
         window.addEventListener("resize", function (event) {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            canvas.style.height = "100%";
+            canvas.style.width = "100%";
+            canvas.width  = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
         });
         // Controller handling
         window.addEventListener("mousemove", function (event) {
@@ -293,7 +185,6 @@
         gameLoop();
     }
     var c;
-    var fps = 60;
     var running = false;
     var drawingPile = [];
 
@@ -318,9 +209,6 @@
     
     //Resetting some assets after every loop finishes
     function loopReset() {
-        // controllerState.mouse.right=false;
-        // controllerState.mouse.left=false;
-        // controllerState.mouse.central=false;
         controllerState.mouse.wheel = false;
         controllerState.mouse.rightClick = 0;
         controllerState.mouse.centralClick = 0;

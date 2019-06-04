@@ -1,3 +1,228 @@
-<!DOCTYPE html><html lang=""><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>/dandimrod · </title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content=""/><meta property="og:title" content="/dandimrod · "/><meta property="og:type" content="website"/><meta property="og:url" content="https://dandimrod.github.io/index.html"/><meta property="og:description" content=""/><meta property="og:image" content="https://dandimrod.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://dandimrod.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://dandimrod.github.io/blog/atom.xml" title="/dandimrod Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://dandimrod.github.io/blog/feed.xml" title="/dandimrod Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="/js/noise.js"></script><script type="text/javascript" src="/js/footer.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">/dandimrod</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/projects/projects" target="_self">Projects</a></li><li class=""><a href="/about" target="_self">About me</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div><div class="homeContainer"><div class="homeSplashFade"><div class="wrapper homeWrapper"><div class="inner"><h2 class="projectTitle">/dandimrod<small></small></h2><div class="section promoSection"><div class="promoRow"><div class="pluginRowBlock"></div></div></div></div></div></div></div><div class="mainContainer"><div class="container paddingBottom paddingTop" id="try"><div class="wrapper"><div class="gridBlock"><div class="blockElement alignCenter imageAlignTop twoByGridBlock"><div class="blockImage"><img src="/img/profile.jpg"/></div><div class="blockContent"><h2><div><span><p>Hello my name is Daniel Diment Rodríguez</p>
-</span></div></h2><div><span><p>I'm a Software Engineering Student at University of Seville and this is my webpage</p>
-</span></div></div></div></div></div></div><div class="productShowcaseSection paddingBottom" style="text-align:center"><h2>Content</h2><a href="/docs/projects/projects">Here you can see my latests projects</a><br/><a href="/about.html">Here you can see my resume</a></div></div></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.png" alt="/dandimrod" width="66"/></a><div><h5>My sites</h5><a href="/about.html">About me</a><a href="https://stackoverflow.com/users/9198801/daniel-diment" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://www.linkedin.com/in/daniel-diment-rodriguez/">LinkedIn</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/dandimrod">GitHub</a></div></section><section class="copyright">2019 dandimrod</section></footer><canvas id="footer-canvas" class="footer-canvas"></canvas></div></div></body></html>
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>/dandimrod</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="bg.js"></script>
+    <link rel="stylesheet" href="index.css">
+<link rel="icon" href="favicon.png" type="image/png"></head>
+
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="profile">
+        <div id="profile_img" style="background: url(https://avatars2.githubusercontent.com/u/28782640?v=4) center;"></div>
+        <div id="username"><span style="display:block;">Daniel Diment</span><a href="https://github.com/dandimrod">@dandimrod</a></div>
+        <div id="userbio" style="display: block;">Student of software engineering at the University of Seville</div>
+        <div id="about">
+                <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
+                <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
+                <span style="display:block;"><i class="fas fa-link"></i> &nbsp; <a href="https://dandimrod.github.io">https://dandimrod.github.io</a></span>
+                <span style="display:block;"><i class="fab fa-linkedin"></i> &nbsp; <a href="https://www.linkedin.com/in/daniel-diment-rodriguez/">LinkedIn</a></span>
+                <span style="display:block;"><i class="fab fa-stack-overflow"></i> &nbsp; <a href="https://www.linkedin.com/in/daniel-diment-rodriguez/">StackOverflow</a></span>
+                <span style="display:block;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; Seville</span>
+                <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span></div>
+                <canvas id="bg"></canvas>
+    </div>
+    <div id="display">
+        <nav class="ns-TabNav">
+            <a href="#resume" class="ns-TabNav_Link"><span>Resume</span></a>
+            <a href="#work" class="ns-TabNav_Link"><span>Projects</span></a>
+            <a href="#blog_section" class="ns-TabNav_Link"><span>Blog</span></a>
+            <span class="ns-TabNav_Indicator"></span>
+        </nav>
+        <div id="resume">
+            <h1>Resume</h1>
+            <h2>Experience</h2>
+            <section>
+                <div class="section_title">Engineering Internship</div>
+                <div class="about_section">
+                <span style="display:block;">Elelog SL</span>
+                </div>
+                <div class="bottom_section">
+                        <span>Jun 2018 – Sep 2018</span>
+                        <span>Seville</span>
+                    </div>
+            </section>
+            <h2>Education</h2>
+            <section>
+                <div class="section_title">Universidad de Sevilla</div>
+                <div class="about_section">
+                <span style="display:block;">Engineer's degree, Computer Software Engineering</span>
+                </div>
+                <div class="bottom_section">
+                        <span>2015 - Present day</span>
+                        <span>Seville</span>
+                </div>
+            </section>
+            <h2>Skills</h2>
+            <section>
+                    <div class="section_title">Programing languages</div>
+                    <div class="about_section">
+                        <ul>
+                            <li>
+                                JavaScript - Proficient
+                            </li>
+                            <li>
+                                Java - Proficient
+                            </li>
+                            <li>
+                                Python - Intermediate
+                            </li>
+                            <li>
+                                SQL - Intermediate
+                            </li>
+                        </ul>
+                    </div>
+            </section>
+            <section>
+                    <div class="section_title">Other Tools</div>
+                    <div class="about_section">
+                        <ul>
+                            <li>
+                                Eclipse
+                            </li>
+                            <li>
+                                Visual Studio Code
+                            </li>
+                            <li>
+                                Linux
+                            </li>
+                            <li>
+                                Git
+                            </li>
+                            <li>
+                                Microsoft Office
+                            </li>
+                        </ul>
+                    </div>
+            </section>
+            <h2>Languages</h2>
+            <section>
+                <div class="section_title">Spanish</div>
+                <div class="about_section">
+                <span style="display:block;">Native level</span>
+                </div>
+            </section>
+            <section>
+                <div class="section_title">English</div>
+                <div class="about_section">
+                <span style="display:block;">Advanced level</span>
+                </div>
+            </section>
+        </div>
+        <div id="work">
+            <h1>Projects</h1>
+            <div class="projects" id="work_section">
+                        <section>
+                            <div class="section_title">IndexSQL</div>
+                            <div class="about_section">
+                            <span style="display:block;">Project that simplifies the use of IndexedDB by making it compatible with SQL like sintaxis.</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
+                                <a href="https://dandimrod.github.io/IndexSQL/" target="_blank"><span>Proyect page</span></a>
+                                <a href="https://github.com/dandimrod/IndexSQL" target="_blank"><span>Repository</span></a>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="section_title">Galactinauts</div>
+                            <div class="about_section">
+                            <span style="display:block;">Javascript game with a focus on exploration and social interactions.</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
+                                <span>Still on development</span>
+                            </div>
+                        </section>
+            </div>
+        </div>
+        <div id="blog_section">
+                <h1>Blog</h1>
+                <div id="blogs">
+                    Coming Soon
+
+                    
+                </div>
+        </div>
+        <div id="footer">
+                <a href="https://github.com/imfunniee" target="_blank">Page layout by imfunniee</a><br/>
+                <a href="https://codemyui.com/active-link-indicator/" target="_blank">Nav Bar by Code My UI</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        setTimeout(function () {
+            document.getElementById("loading").classList.add("animated");
+            document.getElementById("loading").classList.add("fadeOut");
+            setTimeout(function () {
+                document.getElementById("loading").classList.remove("animated");
+                document.getElementById("loading").classList.remove("fadeOut");
+                document.getElementById("loading").style.display = "none";
+            }, 800);
+        }, 1500);
+        // $.getJSON("blog.json", function (blog) {
+        //     blog = blog || [];
+        //     if (blog.length == 0) {
+        //         return document.getElementById("blog_section").style.display = "none";
+        //     }
+        //     for (var i = 0; i < blog.length; i++) {
+        //         $("#blogs").append(`
+        //     <a href="./blog/${blog[i].url_title}/" target="_blank">
+        //         <section>
+        //             <img src="${blog[i].top_image}">
+        //             <div class="blog_container">
+        //                 <div class="section_title">${blog[i].title}</div>
+        //                 <div class="about_section">
+        //                     ${blog[i].sub_title}
+        //                 </div>
+        //             </div>
+        //         </section>
+        //     </a>
+        //     `);
+        //     }
+        // }).fail(function () {
+        //     return document.getElementById("blog_section").style.display = "none";
+        // });
+
+        /**
+        * position indicator function
+        */
+        function checkVisible( elm, evalType ) {
+            evalType = evalType || "visible";
+
+            var vpH = $(window).height(), // Viewport Height
+                st = $(window).scrollTop(), // Scroll Top
+                y = $(elm).offset().top,
+                elementHeight = $(elm).height();
+
+            if (evalType === "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
+            if (evalType === "above") return ((y < (vpH + st)));
+        }
+        function positionIndicator() {
+            var sections=["#resume","#work","#blog_section"]
+            var tabNavList = document.body.querySelector(".ns-TabNav");
+            var tabNavCurrentLinkindicator = tabNavList.querySelector(".ns-TabNav_Indicator");
+            var tabNavListLeftPosition = tabNavList.getBoundingClientRect().left;
+            var tabsModuleSectionDataValue = sections.find(function(section){
+                return checkVisible(document.querySelector(section));
+            })||"#resume";
+            var tabNavCurrentLinkText = tabNavList.querySelector("[href='" + tabsModuleSectionDataValue + "'] span");
+            var tabNavCurrentLinkTextPosition = tabNavCurrentLinkText.getBoundingClientRect();
+            tabNavCurrentLinkindicator.style.transform =
+            "translate3d(" +
+            (tabNavCurrentLinkTextPosition.left - tabNavListLeftPosition) +
+            "px,0,0) scaleX(" +
+            tabNavCurrentLinkTextPosition.width * 0.01 +
+            ")";
+            setInterval(function(){
+                positionIndicator();
+            },100);
+        }
+        positionIndicator();
+    </script>
+</body></html>
