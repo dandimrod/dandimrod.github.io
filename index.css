@@ -390,7 +390,7 @@ body{
     #profile {
         width:90vw;
         padding:4vh 5vw;
-        height:60vh;
+        height:auto;
         text-align:center;
         position: relative;
     }
