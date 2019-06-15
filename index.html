@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>/dandimrod</title>
+    <meta name="Description" content="Personal page of Daniel Diment">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -29,16 +30,12 @@
                 <canvas id="bg"></canvas>
     </div>
     <div id="display">
-        <nav class="ns-TabNav">
-            <a href="#resume" class="ns-TabNav_Link"><span>Resume</span></a>
-            <a href="#work" class="ns-TabNav_Link"><span>Projects</span></a>
-            <a href="#blog_section" class="ns-TabNav_Link"><span>Blog</span></a>
-            <span class="ns-TabNav_Indicator"></span>
+        <nav class="ns-TabNav" id="TabNav">
         </nav>
         <div id="resume">
             <h1>Resume</h1>
             <h2>Experience</h2>
-            <div class="projects">
+            <div class="section">
                 <section>
                     <div class="section_title">Engineering Internship</div>
                     <div class="about_section">
@@ -51,7 +48,7 @@
                 </section>
             </div>
             <h2>Education</h2>
-            <div class="projects">
+            <div class="section">
                 <section>
                     <div class="section_title">Universidad de Sevilla</div>
                     <div class="about_section">
@@ -65,7 +62,7 @@
             </div>
 
             <h2>Skills</h2>
-            <div class="projects">
+            <div class="section">
                 <section>
                         <div class="section_title">Programing languages</div>
                         <div class="about_section">
@@ -109,7 +106,7 @@
                 </section>
             </div>
             <h2>Languages</h2>
-            <div class="projects">
+            <div class="section">
                 <section>
                     <div class="section_title">Spanish</div>
                     <div class="about_section">
@@ -126,7 +123,7 @@
         </div>
         <div id="work">
             <h1>Projects</h1>
-            <div class="projects" id="work_section">
+            <div class="section" id="work_section">
                         <section>
                             <div class="section_title">IndexSQL</div>
                             <div class="about_section">
@@ -150,88 +147,140 @@
                         </section>
             </div>
         </div>
-        <div id="blog_section">
+        <div id="blog">
                 <h1>Blog</h1>
                 <div id="blogs">
-                    Coming Soon
-
-                    
                 </div>
         </div>
         <div id="footer">
+                <a href="https://github.com/dandimrod/gitfolio-ex" target="_blank">Created with gitfolio-ex</a><br/>
                 <a href="https://github.com/imfunniee/gitfolio" target="_blank">Page layout by gitfolio</a><br/>
                 <a href="https://codemyui.com/active-link-indicator/" target="_blank">Nav Bar by Code My UI</a>
         </div>
     </div>
 
     <script type="text/javascript">
-        setTimeout(function () {
+        (function(){
+            // Spinner handler
+            setTimeout(function () {
             document.getElementById("loading").classList.add("animated");
             document.getElementById("loading").classList.add("fadeOut");
             setTimeout(function () {
-                document.getElementById("loading").classList.remove("animated");
-                document.getElementById("loading").classList.remove("fadeOut");
-                document.getElementById("loading").style.display = "none";
-            }, 800);
-        }, 1500);
-        // $.getJSON("blog.json", function (blog) {
-        //     blog = blog || [];
-        //     if (blog.length == 0) {
-        //         return document.getElementById("blog_section").style.display = "none";
-        //     }
-        //     for (var i = 0; i < blog.length; i++) {
-        //         $("#blogs").append(`
-        //     <a href="./blog/${blog[i].url_title}/" target="_blank">
-        //         <section>
-        //             <img src="${blog[i].top_image}">
-        //             <div class="blog_container">
-        //                 <div class="section_title">${blog[i].title}</div>
-        //                 <div class="about_section">
-        //                     ${blog[i].sub_title}
-        //                 </div>
-        //             </div>
-        //         </section>
-        //     </a>
-        //     `);
-        //     }
-        // }).fail(function () {
-        //     return document.getElementById("blog_section").style.display = "none";
-        // });
+                    document.getElementById("loading").classList.remove("animated");
+                    document.getElementById("loading").classList.remove("fadeOut");
+                    document.getElementById("loading").style.display = "none";
+                }, 800);
+            }, 1500);
+            // Blog handler
+            function getBlogs(){
+                let xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        let info=JSON.parse(this.responseText);
+                        let blogList=info.blog;
+                        initializeBlogs(blogList);
+                    }
+                };
+                xhttp.open("GET", "info.json", true);
+                xhttp.send();
+            }
+            getBlogs();
+            function initializeBlogs(blogList){
+                if(blogList){
+                    function drawBlog(blogId){
+                        let xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function(blogId){
+                            return function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    let blogInfo=JSON.parse(this.responseText);
+                                    let date = new Date(blogInfo.date)
+                                    $("#blogs").append(`
+                                        <a href="./blog/${blogId}/">
+                                            <section>
+                                                <img src="${blogInfo.top_image}">
+                                                <div class="blog_container">
+                                                    <div class="section_title">${blogInfo.title}</div>
+                                                    <div class="about_section">
+                                                        ${blogInfo.sub_title}
+                                                        <br/>
+                                                        ${date.getHours()+":"+date.getMinutes()+" "+(date.getMonth()+1)+"/"+date.getDate()+"/"+date.getFullYear()}
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </a> 
+                                    `);
+                                }
+                            }
+                        }(blogId);
+                        xhttp.open("GET", "blog/"+blogId+"/info.json", true);
+                        xhttp.send();
+                    }
+                    window.addEventListener("scroll",function(blogList,drawBlog){
+                        return function(){
+                            let offset=500;
+                            if($(window).scrollTop() + $(window).height() > $(document).height() - offset){
+                                if(blogList[0]){
+                                    drawBlog(blogList[0]);
+                                    blogList.shift();
+                                }
+                            }
+                        }
+                    }(blogList,drawBlog))
+                }else{
+                    document.getElementById("blog").parentElement.removeChild(document.getElementById("blog"));   
+                }
+            }
+            
+            // Nav menu handler
+            let sections=[];
+            function generateSections(){
+                let sectionData = document.getElementById("display").getElementsByTagName("h1");
+                let tabNav= document.getElementById("TabNav");
+                for (let index = 0; index < sectionData.length; index++) {
+                    const sectionName = sectionData[index].innerHTML;
+                    const section="#"+sectionData[index].parentElement.id;
+                    sections.push(section);
+                    let a = document.createElement("a");
+                    a.href=section;
+                    a.className="ns-TabNav_Link";
+                    a.innerHTML="<span>"+sectionName+"</span>"
+                    tabNav.appendChild(a);
+                }
+                let indicator=document.createElement("span");
+                indicator.className="ns-TabNav_Indicator";
+                tabNav.appendChild(indicator);
+            }
+            generateSections();
 
-        /**
-        * position indicator function
-        */
-        function checkVisible( elm, evalType ) {
-            evalType = evalType || "visible";
+            function checkVisible( elm, evalType ) {
+                evalType = evalType || "visible";
 
-            var vpH = $(window).height(), // Viewport Height
-                st = $(window).scrollTop(), // Scroll Top
-                y = $(elm).offset().top,
-                elementHeight = $(elm).height();
+                let vpH = $(window).height(), // Viewport Height
+                    st = $(window).scrollTop(), // Scroll Top
+                    y = $(elm).offset().top,
+                    elementHeight = $(elm).height();
 
-            if (evalType === "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
-            if (evalType === "above") return ((y < (vpH + st)));
-        }
-        function positionIndicator() {
-            var sections=["#resume","#work","#blog_section"]
-            var tabNavList = document.body.querySelector(".ns-TabNav");
-            var tabNavCurrentLinkindicator = tabNavList.querySelector(".ns-TabNav_Indicator");
-            var tabNavListLeftPosition = tabNavList.getBoundingClientRect().left;
-            var tabsModuleSectionDataValue = sections.find(function(section){
-                return checkVisible(document.querySelector(section));
-            })||"#resume";
-            var tabNavCurrentLinkText = tabNavList.querySelector("[href='" + tabsModuleSectionDataValue + "'] span");
-            var tabNavCurrentLinkTextPosition = tabNavCurrentLinkText.getBoundingClientRect();
-            tabNavCurrentLinkindicator.style.transform =
-            "translate3d(" +
-            (tabNavCurrentLinkTextPosition.left - tabNavListLeftPosition) +
-            "px,0,0) scaleX(" +
-            tabNavCurrentLinkTextPosition.width * 0.01 +
-            ")";
-            setInterval(function(){
-                positionIndicator();
-            },100);
-        }
-        positionIndicator();
+                if (evalType === "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
+                if (evalType === "above") return ((y < (vpH + st)));
+            }
+            function positionIndicator() {
+                let tabNavList = document.body.querySelector(".ns-TabNav");
+                let tabNavCurrentLinkindicator = tabNavList.querySelector(".ns-TabNav_Indicator");
+                let tabNavListLeftPosition = tabNavList.getBoundingClientRect().left;
+                let tabsModuleSectionDataValue = sections.find(function(section){
+                    return checkVisible(document.querySelector(section));
+                })||"#resume";
+                let tabNavCurrentLinkText = tabNavList.querySelector("[href='" + tabsModuleSectionDataValue + "'] span");
+                let tabNavCurrentLinkTextPosition = tabNavCurrentLinkText.getBoundingClientRect();
+                tabNavCurrentLinkindicator.style.transform =
+                "translate3d(" +
+                (tabNavCurrentLinkTextPosition.left - tabNavListLeftPosition) +
+                "px,0,0) scaleX(" +
+                tabNavCurrentLinkTextPosition.width * 0.01 +
+                ")";
+            }
+            window.addEventListener("scroll",positionIndicator);
+            positionIndicator();
+        })()
     </script>
 </body></html>

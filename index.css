@@ -261,7 +261,7 @@ body{
     font-size:16px;
 }
 
-#work {
+/* #work {
     margin:2vh 0px;
     padding:4vh 0px !important;
 }
@@ -269,25 +269,15 @@ body{
 #resume {
     margin:2vh 0px;
     padding:4vh 0px !important;
-}
+} */
 
-.projects {
-    columns:2;
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-#resume section {
+.section section {
     width:85%;
     padding:2.5vh 5%;
-    display:inline-block;
-    border-radius:5px;
-    color:var(--text-color);
-    border:1px solid rgb(0, 0, 0, 0.08);
-    box-shadow:0px 0px 0px rgb(0, 0, 0, 0);
-    margin:2vh 0px;
-}
-.projects section {
-    width:85%;
-    padding:2.5vh 5%;
-    display:inline-block;
     border-radius:5px;
     color:var(--text-color);
     border:1px solid rgb(0, 0, 0, 0.08);
@@ -297,7 +287,7 @@ body{
     transform:scale(1);
 }
 
-.projects section:hover {
+.section section:hover {
     cursor: pointer;
     border:1px solid rgb(0, 0, 0, 0);
     box-shadow:0px 15px 35px rgb(0, 0, 0, 0.06);
@@ -341,7 +331,8 @@ body{
 }
 
 #blogs {
-    columns:2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #blogs section {
@@ -410,14 +401,14 @@ body{
     #work {
         margin:0px;
     }
-    .projects {
-        columns:1;
+    .section {
+        grid-template-columns:1fr;
     }
-    .projects section {
+    .section section {
         width:88%;
     }
     #blogs {
-        columns:1;
+        grid-template-columns: 1fr;
     }
     #blogs section {
         width:98%;
@@ -536,27 +527,4 @@ body{
       opacity: 1;
     }
   }
-  /* prettify */
-  
-  /* body {
-    box-sizing: border-box;
-    background: #333;
-    height: 100vh;
-    overflow: hidden;
-    padding-top: 100px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  } */
-  
-  /* .ns-ScrollWrapper {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
-  
-  .ns-ScrollWrapper::-webkit-scrollbar {
-      display: none;
-      height: 0;
-      background-color: transparent;
-    } */
+
