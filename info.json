@@ -1,0 +1,116 @@
+{
+  "sections": {
+    "Resume": {
+      "Experience": [
+        {
+          "title": "Engineering Intern",
+          "about": "Fujitsu Spain",
+          "bottom": [
+            "Jun 2019 – Present",
+            "Sevilla Area, Spain"
+          ]
+        },
+        {
+          "title": "Engineering Intern",
+          "about": "Elelog SL",
+          "bottom": [
+            "Jun 2018 – Seo 2018",
+            "Sevilla Area, Spain"
+          ]
+        }
+      ],
+      "Education": [
+        {
+          "title": "Engineer's degree, Computer Software Engineering",
+          "about": "Universidad de Sevilla",
+          "bottom": [
+            "2014-2016"
+          ]
+        }
+      ],
+      "Skills": [
+        {
+          "title": "Top Skills",
+          "about": "<ul><li>Javascript</li><li>Java</li><li>HTML</li></ul>",
+          "bottom": []
+        },
+        {
+          "title": "Industry Knowledge",
+          "about": "<ul><li>Software Development</li><li>Programming</li><li>Web Development</li></ul>",
+          "bottom": []
+        },
+        {
+          "title": "Tools &amp; Technologies",
+          "about": "<ul><li>SQL</li><li>MySQL</li><li>CSS</li><li>Linux</li><li>XML</li><li>JSON</li><li>AngularJS</li><li>UML</li><li>Eclipse</li><li>Git</li><li>Node.js</li></ul>",
+          "bottom": []
+        }
+      ],
+      "Languages": [
+        {
+          "title": "English",
+          "about": "Professional working proficiency",
+          "bottom": []
+        },
+        {
+          "title": "Spanish",
+          "about": "Native or bilingual proficiency",
+          "bottom": []
+        }
+      ]
+    },
+    "Projects": [
+      {
+        "title": "PostmanLocalMock",
+        "a": "https://github.com//dandimrod/PostmanLocalMock",
+        "about": "Simple utility that runs a mock api out of an API using a postman collection as a base.",
+        "bottom": [
+          "<i class=\"fas fa-code\"></i>&nbsp; None",
+          "<div hidden class=\"repoStats\"><span><i class=\"fas fa-star\"></i>&nbsp; 0</span><span><i class=\"fas fa-code-branch\"></i>&nbsp; 0</span></div>"
+        ]
+      },
+      {
+        "title": "IndexSQL",
+        "a": "https://github.com//dandimrod/IndexSQL",
+        "about": "Project that simplifies the use of IndexedDB by making it compatible with SQL like sintaxis.",
+        "bottom": [
+          "<i class=\"fas fa-code\"></i>&nbsp; JavaScript",
+          "<div hidden class=\"repoStats\"><span><i class=\"fas fa-star\"></i>&nbsp; 0</span><span><i class=\"fas fa-code-branch\"></i>&nbsp; 0</span></div>"
+        ]
+      }
+    ]
+  },
+  "theme": {
+    "bg-color": "#fff",
+    "text-color": "rgb(10, 10, 10)",
+    "blog-gray-color": "rgb(80, 80, 80)",
+    "background-image": "linear-gradient(90deg, rgba(10, 10, 10, 0.4), rgb(10, 10, 10, 0.4)), url(https://images.unsplash.com/photo-1553748024-d1b27fb3f960?w=500&h=1000&q=80&fit=crop)",
+    "background-background": "#fff",
+    "nav-indicator-color": "#63c2cf"
+  },
+  "icon": "favicon.png",
+  "description": "Personal page of Daniel Diment",
+  "title": "dandimrod",
+  "username": "dandimrod",
+  "name": "Daniel Diment",
+  "bio": "Student of software engineering at the University of Seville",
+  "location": "Seville",
+  "company": "Fujitsu Spain",
+  "pages": [
+    {
+      "icon": "",
+      "text": "",
+      "link": "https://dandimrod.github.io"
+    },
+    {
+      "icon": "fab fa-linkedin",
+      "text": "LinkedIn",
+      "link": "https://www.linkedin.com/in/daniel-diment-rodriguez/"
+    },
+    {
+      "icon": "fab fa-stack-overflow",
+      "text": "StackOverflow",
+      "link": "https://stackoverflow.com/users/9198801/daniel-diment"
+    }
+  ],
+  "userimg": "https://avatars3.githubusercontent.com/u/28782640?s=460&amp;v=4"
+}

@@ -1,3 +1,5 @@
+
+        
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Questrial');
 
@@ -261,43 +263,32 @@ body{
     font-size:16px;
 }
 
-#work {
-    margin:2vh 0px;
-    padding:4vh 0px !important;
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-
-#resume {
-    margin:2vh 0px;
-    padding:4vh 0px !important;
-}
-
-.projects {
-    columns:2;
-}
-#resume section {
+.section section {
     width:85%;
     padding:2.5vh 5%;
-    display:inline-block;
     border-radius:5px;
     color:var(--text-color);
     border:1px solid rgb(0, 0, 0, 0.08);
     box-shadow:0px 0px 0px rgb(0, 0, 0, 0);
-    margin:2vh 0px;
-}
-.projects section {
-    width:85%;
-    padding:2.5vh 5%;
-    display:inline-block;
-    border-radius:5px;
-    color:var(--text-color);
-    border:1px solid rgb(0, 0, 0, 0.08);
-    box-shadow:0px 0px 0px rgb(0, 0, 0, 0);
-    transition:0.4s ease-in-out;
     margin:2vh 0px;
     transform:scale(1);
 }
 
-.projects section:hover {
+.section a{
+    color:var(--text-color);
+    text-decoration: none;
+    display:grid;
+}
+
+.section a section{
+    transition:0.4s ease-in-out;
+}
+
+.section a section:hover {
     cursor: pointer;
     border:1px solid rgb(0, 0, 0, 0);
     box-shadow:0px 15px 35px rgb(0, 0, 0, 0.06);
@@ -341,7 +332,8 @@ body{
 }
 
 #blogs {
-    columns:2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #blogs section {
@@ -400,7 +392,7 @@ body{
         height:auto;
         display:inline-block;
         padding-left:5vw;
-        background-color: #fff;
+        background-color: var(--bg-color);
     }
     #profile_img {
         width:120px;
@@ -410,14 +402,14 @@ body{
     #work {
         margin:0px;
     }
-    .projects {
-        columns:1;
+    .section {
+        grid-template-columns:1fr;
     }
-    .projects section {
+    .section section {
         width:88%;
     }
     #blogs {
-        columns:1;
+        grid-template-columns: 1fr;
     }
     #blogs section {
         width:98%;
@@ -457,13 +449,6 @@ body{
 ::-webkit-scrollbar {width:5px;height:5px;}
 ::-webkit-scrollbar-track {background:var(--bg-color);}
 ::-webkit-scrollbar-thumb {background:var(--text-color);}
-:root {
-  --bg-color: #fff;
-  --text-color: rgb(10, 10, 10);
-  --blog-gray-color: rgb(80, 80, 80);
-  /* --background-image: linear-gradient(90deg, rgba(10, 10, 10, 0.4), rgb(10, 10, 10, 0.4)), url("https://images.unsplash.com/photo-1553748024-d1b27fb3f960?w=500&h=1000&q=80&fit=crop"); */
-  --background-background: #fff;
-}
 
 /* Nav */
   nav{
@@ -473,9 +458,9 @@ body{
     position: -webkit-sticky; 
     position: sticky; 
     top:0;
-    background-color: #fff;
+    background-color: var(--bg-color);
     font-size: 0; /* wipe out any unwanted whitespace betweeen inline elements */
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid var(--text-color);
   }
   
   .ns-TabNav .ns-TabNav_Link {
@@ -484,7 +469,7 @@ body{
       text-decoration: none;
       font-size: 12px;
       line-height: calc(11px * 4);
-      color: #555;
+      color: var(--text-color);
       text-transform: uppercase;
     }
   
@@ -500,7 +485,7 @@ body{
       left: 0;
       width: 100px;
       height: 3px;
-      background-color: #63c2cf;
+      background-color: var(--nav-indicator-color);
       transition-property: left, background-color, -webkit-transform;
       transition-property: transform, left, background-color;
       transition-property: transform, left, background-color, -webkit-transform;
@@ -519,7 +504,7 @@ body{
   .ns-TabPanel {
     padding: 40px;
     font-size: 11px;
-    color: #545454;
+    color: var(--text-color);
     text-transform: uppercase;
     letter-spacing: 1px;
     display: none;
@@ -536,27 +521,7 @@ body{
       opacity: 1;
     }
   }
-  /* prettify */
-  
-  /* body {
-    box-sizing: border-box;
-    background: #333;
-    height: 100vh;
-    overflow: hidden;
-    padding-top: 100px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  } */
-  
-  /* .ns-ScrollWrapper {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
-  
-  .ns-ScrollWrapper::-webkit-scrollbar {
-      display: none;
-      height: 0;
-      background-color: transparent;
-    } */
+
+
+        
+        
