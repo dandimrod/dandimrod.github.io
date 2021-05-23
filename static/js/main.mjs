@@ -2,6 +2,7 @@ import loader from './loader.mjs';
 import themes from './themes.mjs';
 import i18n from './i18n.mjs';
 import gui from './gui.mjs';
+import nav from './gui_modules/nav.mjs';
 
 async function main() {
     loader.on();
@@ -11,7 +12,7 @@ async function main() {
     const lang = i18n.get();
     const infoLang = await fetch(`./info.${lang}.json`).then(res => res.json());
     gui.load(infoLang);
-    gui.addEventListener('changeLanguage', async (newLang) => {
+    nav.addEventListener('changeLanguage', async (newLang) => {
         loader.on();
         i18n.set(newLang);
         const lang = i18n.get();
@@ -19,11 +20,11 @@ async function main() {
         gui.load(infoLang);
         setTimeout(()=>loader.off(), 1000);
     });
-    gui.addEventListener('changeTheme', (newTheme)=>{
+    nav.addEventListener('changeTheme', (newTheme)=>{
         themes.change(newTheme);
     });
     setTimeout(()=>loader.off(), 1000);
 }
 window.addEventListener('load', () => {
-    main()
+    main();
 });

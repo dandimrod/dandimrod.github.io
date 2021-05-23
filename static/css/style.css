@@ -211,6 +211,10 @@ a{
     display: grid;
     gap:10px;
     cursor:initial;
+    max-width: calc(100vw - 70px);
+}
+.modal a>h1 {
+    text-decoration: underline;
 }
 .modal-container{
     position: fixed;
