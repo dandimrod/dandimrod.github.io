@@ -85,6 +85,10 @@ p {
     word-wrap: break-word;
 }
 
+.card.clickable .title {
+    text-decoration: underline;
+}
+
 .card .body {
     font-size: 18px;
     font-family: 'Questrial', sans-serif;

@@ -82,6 +82,7 @@
     text-align: center;
   }
   #lb-img img {
-    height: 100%;
-    width: auto !important;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
   }
