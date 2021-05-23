@@ -139,6 +139,7 @@ const tags = (function () {
             const tagId = tagList.indexOf(tag);
             const buttonTag = document.createElement('button');
             buttonTag.innerHTML = tag;
+            buttonTag.setAttribute('tag-content', tag);
             buttonTag.classList.add('pill');
             buttonTag.name = 'tag-' + tag;
             buttonTag.style.setProperty('--pill-color', colorList[tagId % (colorList.length - 1)]);
@@ -190,10 +191,10 @@ const tags = (function () {
                 for (const nextSection of section.contents) {
                     resultArray.push(this.filter(nextSection, cb));
                 }
-                result = resultArray.find(result => result);
+                result = resultArray.find(result => result) || false;
             } else {
                 if (section.tags) {
-                    result = !activeTags.find(tag => tag);
+                    result = !(activeTags.find(tag => tag) || false);
                     if (!result) {
                         for (const tag of section.tags) {
                             const id = tagList.indexOf(tag);
@@ -314,8 +315,10 @@ function drawSection(element, sections, deep = 1) {
             sectionEl.className = 'card';
             if (section.link || section.description || section.gallery) {
                 sectionEl.classList.add('clickable');
-                sectionEl.onclick = () => {
-                    modal(section);
+                sectionEl.onclick = (ev) => {
+                    if(!ev.target.classList.contains('pill')){
+                        modal(section);
+                    }
                 };
             }
             sectionEl.id = 'section-' + sectionID;
@@ -359,9 +362,11 @@ function filterSections(sections) {
                 }, 300)
             } else {
                 sectionElement.classList.add('hidding');
-                const finishHidding = () => {
-                    sectionElement.classList.add('hidden');
-                    sectionElement.removeEventListener('transitionend', finishHidding);
+                const finishHidding = (ev) => {
+                    if(getComputedStyle(ev.target).opacity==="0"){
+                        sectionElement.classList.add('hidden');
+                        sectionElement.removeEventListener('transitionend', finishHidding);
+                    }
                 }
                 sectionElement.addEventListener('transitionend', finishHidding);
             }

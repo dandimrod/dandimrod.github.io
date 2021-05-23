@@ -137,18 +137,42 @@ p {
     padding: 5px 10px;
     margin: 5px;
     cursor: pointer;
+    position: relative;
+}
+.pill::after{
+    content: attr(tag-content);
+    position: absolute;
+    top:-2px;
+    left:-2px;
+    padding: 5px 10px;
+    color: var(--pill-bg-color, rgba(0,0,0,0));
+    border-radius: 25px;
+    border: 2px solid var(--pill-bg-color, rgba(0,0,0,0));
+    white-space: nowrap;
 }
 .pill:hover{
     background-color: var(--pill-color); 
+    color: var(--bg-color); 
+}
+.pill::after:hover{
+    background-color: var(--pill-bg-color, rgba(0,0,0,0)); 
     color: var(--bg-color); 
 }
 .pill.active{
     background-color: var(--pill-color); 
     color: var(--bg-color); 
 }
+.pill.active::after{
+    background-color: var(--pill-bg-color, rgba(0,0,0,0)); 
+    color: var(--bg-color); 
+}
 .pill.active:hover{
     background-color: var(--bg-color); 
     color: var(--pill-color); 
+}
+.pill.active::after:hover{
+    background-color: var(--bg-color); 
+    color: var(--pill-bg-color, rgba(0,0,0,0)); 
 }
 .loaderContainer {
     position: fixed;

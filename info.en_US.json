@@ -140,7 +140,7 @@
             "JavaScript",
             "Angular",
             "PluriDB",
-            "Chart.js",
+            "ChartJS",
             "Webpack",
             "HTML",
             "CSS",
@@ -169,7 +169,12 @@
             "CSS",
             "UI-UX",
             "Jenkins"
-          ] 
+          ],
+          "gallery": [
+            "./static/img/gallery/PluriDB/1.png",
+            "./static/img/gallery/PluriDB/2.png",
+            "./static/img/gallery/PluriDB/3.png"
+          ]
         },
         {
           "title": "Galactinauts",
@@ -183,11 +188,17 @@
             "HTML",
             "CSS",
             "UI-UX"
+          ],
+          "gallery": [
+            "./static/img/gallery/galactinauts/1.png",
+            "./static/img/gallery/galactinauts/2.png",
+            "./static/img/gallery/galactinauts/3.png",
+            "./static/img/gallery/galactinauts/4.png"
           ]
         },
         {
           "title": "PostmanLocalMock",
-          "link": "https://github.com//dandimrod/PostmanLocalMock",
+          "link": "https://github.com/dandimrod/PostmanLocalMock",
           "body": "<div>Simple utility that runs a mock api out of an API using a postman collection as a base.</div> <div>May 2019 – Nov 2020</div>",
           "tags": [
             "JavaScript",
@@ -196,11 +207,14 @@
             "HTML",
             "CSS",
             "UI-UX"
+          ],
+          "gallery":[
+            "./static/img/gallery/PostmanLocalMock/1.png"
           ]
         },
         {
           "title": "IndexSQL",
-          "link": "https://github.com//dandimrod/IndexSQL",
+          "link": "https://dandimrod.dev/IndexSQL",
           "body": "<div>Project that simplifies the use of IndexedDB by making it compatible with SQL like sintaxis.</div> <div>Jul 2019</div>",
           "tags": [
             "JavaScript",
@@ -208,6 +222,11 @@
             "HTML",
             "CSS",
             "UI-UX"
+          ],
+          "gallery": [
+            "./static/img/gallery/IndexSQL/1.png",
+            "./static/img/gallery/IndexSQL/2.png",
+            "./static/img/gallery/IndexSQL/3.png"
           ]
         }
       ]

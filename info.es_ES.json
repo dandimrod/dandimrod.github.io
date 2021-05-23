@@ -140,7 +140,7 @@
             "JavaScript",
             "Angular",
             "PluriDB",
-            "Chart.js",
+            "ChartJS",
             "Webpack",
             "HTML",
             "CSS",
@@ -244,6 +244,6 @@
   ],
   "userimg": "https://avatars3.githubusercontent.com/u/28782640?s=460&amp;v=4",
   "translate":{
-    "questionSkills":"What skills are you looking for?"
+    "questionSkills":"¿Qué skills estás buscando?"
   }
 }
