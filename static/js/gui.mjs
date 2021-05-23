@@ -58,6 +58,7 @@ function loadHeader(info) {
     if (info.pages) {
         const pagesElement = document.querySelector('#pages');
         if (pagesElement) {
+            pagesElement.innerHTML = '';
             for (const page of info.pages) {
                 const element = document.createElement('span');
                 element.innerHTML = `
@@ -109,9 +110,15 @@ function loadHeader(info) {
 }
 
 function loadContent(info) {
-    const sections = sec.drawSection(document.getElementById('content'), info.sections);
-    loadAndWrite(info?.translate?.questionSkills, '#tag-filter-title');
-    tags.drawAll(document.getElementById('tag-filter-tags'));
+    const content = document.getElementById('content');
+    content.innerHTML = '';
+    const sections = sec.drawSection(content, info.sections);
+    const tagContainerElement = document.querySelector('#tag-filter');
+    if(tagContainerElement){
+        tagContainerElement.style.display = "";
+        loadAndWrite(info?.translate?.questionSkills, '#tag-filter-title');
+        tags.drawAll(document.getElementById('tag-filter-tags'));
+    }
     tags.addEventListener('change', () => { sec.filterSections(sections) });
 }
 

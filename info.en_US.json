@@ -39,7 +39,7 @@
         },
         {
           "title": "Engineering Intern",
-          "body": "<div>Fujitsu Spain</div><div>Sevilla Area, Spain</div><div>Sevilla Area, Spain</div>",
+          "body": "<div>Fujitsu Spain</div><div>Jun 2019 - Sep 2019</div><div>Sevilla Area, Spain</div>",
           "description": "",
           "tags": [
             "Java",
@@ -71,6 +71,7 @@
       "Education": [
         {
           "title": "Engineer's degree, Computer Software Engineering",
+          "link":"https://www.us.es/estudiar/que-estudiar/oferta-de-grados/grado-en-ingenieria-informatica-ingenieria-del-software#edit-group-plani",
           "body": "<div>Universidad de Sevilla</div></div>2014-Present</div>",
           "tags": [
             "Java",
@@ -87,6 +88,7 @@
         },
         {
           "title": "University Course on Cybersecurity",
+          "link":"https://www.escueladeempresa.com/cursos-universitarios-6-meses/informatica-tecnologia-de-la-informacion-y-robotica/curso-en-introduccion-a-la-ciberseguridad/",
           "body": "<div>Universidad Europea Miguel de Cervantes</div></div>2019</div>",
           "tags": [
             "Cibersecurity",
@@ -215,7 +217,7 @@
         {
           "title": "IndexSQL",
           "link": "https://dandimrod.dev/IndexSQL",
-          "body": "<div>Project that simplifies the use of IndexedDB by making it compatible with SQL like sintaxis.</div> <div>Jul 2019</div>",
+          "body": "<div>Project that simplifies the use of IndexedDB by making it compatible with SQL like sintaxis.</div> <div>Jul 2019 - Dic 2020</div>",
           "tags": [
             "JavaScript",
             "IndexedDB",
@@ -246,6 +248,11 @@
       "link": "https://dandimrod.github.io"
     },
     {
+      "icon": "fab fa-github",
+      "text": "GitHub",
+      "link": "https://github.com/dandimrod"
+    },
+    {
       "icon": "fab fa-linkedin",
       "text": "LinkedIn",
       "link": "https://www.linkedin.com/in/daniel-diment-rodriguez/"
@@ -263,6 +270,7 @@
   ],
   "userimg": "https://avatars3.githubusercontent.com/u/28782640?s=460&amp;v=4",
   "translate":{
-    "questionSkills":"What skills are you looking for?"
+    "questionSkills":"What skills are you looking for?",
+    "downloadCV":"Download CV"
   }
 }
