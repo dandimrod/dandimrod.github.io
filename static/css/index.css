@@ -1,0 +1,97 @@
+body{
+    max-width: 100vw;
+    overflow-x:hidden;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 40px);
+    min-height: 40vh;
+    color: var(--header-text-color);
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+    transition: all 0.4s ease-in-out;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    overflow-x:hidden;
+    z-index: 20;
+}
+header.collapsed{
+    min-height: 5vh;
+    grid-template-columns: 40px 1fr;
+    gap: 0 20px;
+    grid-template-rows: 1fr;
+    padding: 10px;
+    width: calc(100vw - 20px);
+}
+#about {
+    display: grid;
+    gap: 10px;
+    transition: all 0.4s ease-in-out;
+    opacity: 1;
+    max-height: 30vh;
+    overflow:hidden;
+    max-width: 50vh;
+}
+#userbio{
+    text-align: center;
+}
+header.collapsed #about{
+    max-height: 0;
+    grid-column: 1/3;
+}
+#pages{
+    display: grid;
+    gap: 10px;
+}
+#username_container{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+}
+header.collapsed #username_container{
+    grid-template-columns: auto auto;
+    gap: 10px;
+    justify-self: start;
+}
+#name{
+    font-size: 24px;
+}
+#profile_img {
+    border-radius:50%;
+    background-size:cover!important;
+    background-repeat: no-repeat;
+    width:90px;
+    height:90px;
+    transition: all 0.4s ease-in-out;
+}
+
+header.collapsed #profile_img{
+    width:40px;
+    height:40px;
+}
+
+#content, #tag-filter {
+    margin:20px;
+}
+
+#tag-filter-title{
+    display: inline;
+    cursor: pointer;
+}
+
+@media (max-width: 800px){
+    header.collapsed #name{
+        font-size: 18px;
+    }
+    header.collapsed #username{
+        font-size: 16px;
+    }
+}

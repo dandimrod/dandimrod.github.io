@@ -1,0 +1,21 @@
+@page { size: A4; }
+@page {
+    @bottom-right { content: counter(page); }
+}
+
+@media screen {
+
+    .pagedjs_pages {
+       display: flex;
+       width: calc(var(--pagedjs-width));
+       flex: 0; flex-wrap: wrap;
+       margin: 0 auto; justify-content: center;
+
+   }
+
+   .pagedjs_page {
+       margin: 10mm; border: solid 1px gray;
+   }
+}
+
+.page-break { break-after: page; }

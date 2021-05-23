@@ -1,8 +1,4 @@
 
-        
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-@import url('https://fonts.googleapis.com/css?family=Questrial');
-
 body{
     margin:0%;
     padding:0%;
@@ -121,17 +117,6 @@ body{
     margin-top:10vh;
     text-align:left;
     z-index:1;
-}
-
-#background {
-    width:100vw;
-    height:55vh;
-    background:var(--background-background);
-    background-size:cover !important;
-    background-repeat:no-repeat;
-    position: absolute;
-    z-index:-1;
-    margin-top:-10vh;
 }
 
 #blog-display h1 {
