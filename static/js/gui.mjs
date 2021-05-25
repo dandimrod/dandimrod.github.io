@@ -79,7 +79,6 @@ function loadHeader(info) {
         let dev = 0;
 
         function rollup(ev) {
-            console.log(`windowScroll = ${window.scrollY}, deltaY = ${ev.deltaY}`);
             if (dev > 0 || ev.wheelDelta < 0 || ev.deltaY > 0) {
                 document.querySelector('header').classList.add("collapsed");
             } else {
