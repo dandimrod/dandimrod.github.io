@@ -79,7 +79,8 @@ function loadHeader(info) {
         let dev = 0;
 
         function rollup(ev) {
-            if (dev > 0 || ev.wheelDelta < 0) {
+            console.log(`windowScroll = ${window.scrollY}, deltaY = ${ev.deltaY}`);
+            if (dev > 0 || ev.wheelDelta < 0 || ev.deltaY > 0) {
                 document.querySelector('header').classList.add("collapsed");
             } else {
                 if (window.scrollY === 0) {
@@ -98,6 +99,7 @@ function loadHeader(info) {
             };
         };
         window.addEventListener("mousewheel", debounce(rollup));
+        window.addEventListener("wheel", debounce(rollup));
         const debounceOb = debounce(rollup);
         window.addEventListener("touchmove", (ev) => {
             dev = lastTouch - ev.touches[0].screenY;
