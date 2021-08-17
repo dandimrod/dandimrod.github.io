@@ -62,8 +62,10 @@ function loadNav(info) {
                 events.forEach(event => event.type === 'changeLanguage' ? event.callback(newLang) : undefined);
             }
             buttonElement.appendChild(selectLang);
-            const cvButton = document.createElement('a');
-            cvButton.href = "./cv.html";
+            const cvButton = document.createElement('span');
+            cvButton.onclick = () => {
+                window.open( './cv.html', 'Print');
+            }
             cvButton.innerHTML = `<i class="fas fa-file-download" title="${info?.translate?.downloadCV || ''}"></i>`;
             buttonElement.appendChild(cvButton);
             tray.appendChild(buttonElement);

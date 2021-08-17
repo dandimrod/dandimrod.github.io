@@ -19,3 +19,37 @@
 }
 
 .page-break { break-after: page; }
+
+.on-line *{
+    display:inline;
+}
+.on-line *::after{
+    content: ', ';
+}
+.on-line *:last-child:after{
+    content: '';
+}
+
+.label {
+    font-weight: bold;
+}
+.section {
+    margin-bottom: 10px;
+}
+.section .label {
+    display: block;
+}
+a{
+    font-weight: normal !important;
+    text-decoration: underline !important;
+}
+h2{
+    margin: 0!important;
+}
+.section-block {
+    margin-bottom: 20px;
+}
+
+#cover-letter {
+    break-before: page;
+}

@@ -3,31 +3,43 @@ import modal from './modal.mjs';
 let headerID = 0;
 let sectionID = 0;
 
-function drawSection(element, sections, deep = 1) {
+function drawSection(element, sections, deep = 1, cvMode) {
     const sectionList = [];
     if (Array.isArray(sections)) {
         const div = document.createElement('div');
-        div.className = 'card-list';
+        if(!cvMode){
+            div.className = 'card-list';
+        }else{
+            div.className = 'section-block';
+        }
         for (const section of sections) {
             const sectionEl = document.createElement('section');
-            sectionEl.className = 'card';
-            if (section.link || section.description || section.gallery) {
-                sectionEl.classList.add('clickable');
-                sectionEl.onclick = (ev) => {
-                    if(!ev.target.classList.contains('pill')){
-                        modal(section);
-                    }
-                };
-            }
-            sectionEl.id = 'section-' + sectionID;
-            sectionList.push({ id: 'section-' + sectionID, ...JSON.parse(JSON.stringify(section)), visible: true });
-            sectionID++;
-            sectionEl.innerHTML = `<div class="title">${section.title}</div>
-                <div class="cbody">${section.body}</div>
-                <div class="footer"></div>`;
-            if (section.tags) {
-                tags.addTags(section.tags);
-                tags.drawTags(sectionEl.querySelector('.footer'), section.tags);
+            if(cvMode){
+                sectionEl.className = 'section';
+                sectionEl.innerHTML = `
+                    <span class="label">${section.title}:</span>
+                    <span class="on-line">${section.body}</span>
+                `;
+            }else{
+                sectionEl.className = 'card';
+                if (section.link || section.description || section.gallery) {
+                    sectionEl.classList.add('clickable');
+                    sectionEl.onclick = (ev) => {
+                        if(!ev.target.classList.contains('pill')){
+                            modal(section);
+                        }
+                    };
+                }
+                sectionEl.id = 'section-' + sectionID;
+                sectionList.push({ id: 'section-' + sectionID, ...JSON.parse(JSON.stringify(section)), visible: true });
+                sectionID++;
+                sectionEl.innerHTML = `<div class="title">${section.title}</div>
+                    <div class="cbody">${section.body}</div>
+                    <div class="footer"></div>`;
+                if (section.tags) {
+                    tags.addTags(section.tags);
+                    tags.drawTags(sectionEl.querySelector('.footer'), section.tags);
+                }
             }
             div.appendChild(sectionEl);
         }
@@ -42,7 +54,7 @@ function drawSection(element, sections, deep = 1) {
                 h.id = 'header-' + headerID;
                 headerID++;
                 element.appendChild(h);
-                const contents = drawSection(element, sectionBody, deep + 1);
+                const contents = drawSection(element, sectionBody, deep + 1, cvMode);
                 sectionList.push({ id: h.id, name: key, contents, visible: true });
             }
         }
