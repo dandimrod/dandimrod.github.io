@@ -1,250 +1,246 @@
 {
   "sections": {
-      "Work experience": [
-        {
-          "title": "Full Stack Engineer",
-          "body": "<div>Burt Intelligence</div><div>Jul 2021 – Present</div><div>Sweden</div>",
-          "tags":[
-            "JavaScript",
-            "Angular",
-            "HTML",
-            "CSS",
-            "UI-UX",
-            "Scrum",
-            "English"
-          ]
-        },
-        {
-          "title": "Full Stack Javascript Engineer",
-          "body": "<div>Emergya</div><div>Oct 2020 – May 2021</div><div>Sevilla Area, Spain</div>",
-          "tags":[
-            "JavaScript",
-            "Angular",
-            "NodeJS",
-            "Express",
-            "Stencil",
-            "HTML",
-            "CSS",
-            "UI-UX",
-            "Jenkins",
-            "Scrum",
-            "Spanish"
-          ]
-        },
-        {
-          "title": "Business Application Engineer",
-          "body": "<div>CDS, a Hewlett Packard Enterprise company</div><div>Sep 2019 – Oct 2020</div><div>Sevilla Area, Spain</div>",
-          "tags":[
-            "JavaScript",
-            "AngularJS",
-            "NodeJS",
-            "Express",
-            "Java",
-            "HTML",
-            "CSS",
-            "SASS",
-            "UI-UX",
-            "Jenkins",
-            "Gulp",
-            "English",
-            "Spanish"
-          ]
-        },
-        {
-          "title": "Engineering Intern",
-          "body": "<div>Fujitsu Spain</div><div>Jun 2019 - Sep 2019</div><div>Sevilla Area, Spain</div>",
-          "description": "",
-          "tags": [
-            "Java",
-            "Spring",
-            "JavaScript",
-            "React",
-            "HTML",
-            "CSS",
-            "Jenkins",
-            "Scrum",
-            "Linux",
-            "English",
-            "Spanish"
-          ]
-        },
-        {
-          "title": "Engineering Intern",
-          "body": "<div>Elelog SL</div><div>Jun 2018 – Sep 2018</div> <div>Sevilla Area, Spain</div>",
-          "description": "",
-          "tags": [
-            "JavaScript",
-            "Git",
-            "Linux",
-            "UI-UX",
-            "Spanish"
-          ]
-        }
-      ],
-      "Education": [
-        {
-          "title": "Engineer's degree, Computer Software Engineering",
-          "link":"https://www.us.es/estudiar/que-estudiar/oferta-de-grados/grado-en-ingenieria-informatica-ingenieria-del-software#edit-group-plani",
-          "body": "<div>Universidad de Sevilla</div><div>2014-2021</div>",
-          "tags": [
-            "Java",
-            "Python",
-            "JavaScript",
-            "MongoDB",
-            "SQL",
-            "Scrum",
-            "Jenkins",
-            "Docker",
-            "Git",
-            "Linux"
-          ]
-        },
-        {
-          "title": "University Course on Cybersecurity",
-          "link":"https://www.escueladeempresa.com/cursos-universitarios-6-meses/informatica-tecnologia-de-la-informacion-y-robotica/curso-en-introduccion-a-la-ciberseguridad/",
-          "body": "<div>Universidad Europea Miguel de Cervantes</div><div>2019</div>",
-          "tags": [
-            "Cibersecurity",
-            "Linux"
-          ]
-        }
-      ],
-      "Licenses & Certifications": [
-        {
-          "title": "SAFe 4 Practitioner Certification",
-          "link": "https://www.youracclaim.com/badges/ec0bd4a4-fc71-4106-bdb2-8de102f7327e/linked_in_profile",
-          "body": "<div>By Scaled Agile Inc.</div> <div>Issued Oct 2019</div> <div>Expired Oct 2020</div>",
-          "tags": [
-            "Scrum"
-          ]
-        },
-        {
-          "title": "Become a Front-End Web Developer",
-          "link": "https://www.linkedin.com/learning/paths/become-a-front-end-web-developer",
-          "body": "<div>By LinkedIn</div> <div>Issued Jan 2020</div>",
-          "tags": [
-            "JavaScript",
-            "UI-UX",
-            "HTML",
-            "CSS",
-            "Git",
-            "Bootstrap",
-            "SASS",
-            "React"
-          ]
-        }
-      ],
-      "Languages": [
-        {
-          "title":"Spanish",
-          "body":"Native or bilingual proficiency",
-          "tags":["Spanish"]
-        },
-        {
-          "title":"English",
-          "body":"Professional working proficiency",
-          "tags":["English"]
-        }
-      ],
-      "Projects": [
-        {
-          "title": "Oikometer",
-          "link": "https://dandimrod.dev/oikometer",
-          "body": "<div>Free and private personal finance webapp</div> <div>Mar 2021 – Present</div>",
-          "tags": [
-            "JavaScript",
-            "Angular",
-            "PluriDB",
-            "ChartJS",
-            "Webpack",
-            "HTML",
-            "CSS",
-            "UI-UX"
-          ],
-          "gallery":[
-            "./static/img/gallery/oikometer/Screenshot1.png",
-            "./static/img/gallery/oikometer/Screenshot2.png",
-            "./static/img/gallery/oikometer/Screenshot3.png",
-            "./static/img/gallery/oikometer/Screenshot4.png",
-            "./static/img/gallery/oikometer/Screenshot5.png"
-          ]
-        },
-        {
-          "title": "PluriDB",
-          "link": "https://dandimrod.dev/PluriDB",
-          "body": "<div> Modular database for the Front-End</div><div>Dec 2020 – Present</div>",
-          "tags": [
-            "JavaScript",
-            "SQL",
-            "MongoDB",
-            "IndexedDB",
-            "Webpack",
-            "NPM",
-            "HTML",
-            "CSS",
-            "UI-UX",
-            "Jenkins"
-          ],
-          "gallery": [
-            "./static/img/gallery/PluriDB/1.png",
-            "./static/img/gallery/PluriDB/2.png",
-            "./static/img/gallery/PluriDB/3.png"
-          ]
-        },
-        {
-          "title": "Galactinauts",
-          "body": "<div>Web space simulation game</div><div>Jun 2018 – Present</div>",
-          "tags": [
-            "JavaScript",
-            "CanvasAPI",
-            "WebRTC",
-            "IndexedDB",
-            "NodeJS",
-            "HTML",
-            "CSS",
-            "UI-UX"
-          ],
-          "gallery": [
-            "./static/img/gallery/galactinauts/1.png",
-            "./static/img/gallery/galactinauts/2.png",
-            "./static/img/gallery/galactinauts/3.png",
-            "./static/img/gallery/galactinauts/4.png"
-          ]
-        },
-        {
-          "title": "PostmanLocalMock",
-          "link": "https://github.com/dandimrod/PostmanLocalMock",
-          "body": "<div>Simple utility that runs a mock api out of an API using a postman collection as a base</div> <div>May 2019 – Nov 2020</div>",
-          "tags": [
-            "JavaScript",
-            "NodeJS",
-            "Express",
-            "HTML",
-            "CSS",
-            "UI-UX"
-          ],
-          "gallery":[
-            "./static/img/gallery/PostmanLocalMock/1.png"
-          ]
-        },
-        {
-          "title": "IndexSQL",
-          "link": "https://dandimrod.dev/IndexSQL",
-          "body": "<div>Project that simplifies the use of IndexedDB by making it compatible with SQL like sintaxis</div> <div>Jul 2019 - Dic 2020</div>",
-          "tags": [
-            "JavaScript",
-            "IndexedDB",
-            "HTML",
-            "CSS",
-            "UI-UX"
-          ],
-          "gallery": [
-            "./static/img/gallery/IndexSQL/1.png",
-            "./static/img/gallery/IndexSQL/2.png",
-            "./static/img/gallery/IndexSQL/3.png"
-          ]
-        }
+    "Work experience": [{
+      "title": "Full Stack Javascript Engineer",
+      "body": "<div>Upsales</div><div>Apr 2023 – Present</div><div>Linköping, Sweden</div>",
+      "tags": [
+        "JavaScript",
+        "React",
+        "NodeJS",
+        "Express",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "UI-UX",
+        "Scrum",
+        "English"
       ]
+    }, {
+      "title": "Full Stack Engineer",
+      "body": "<div>Burt Intelligence</div><div>Jul 2021 – Mar 2023</div><div>Sweden</div>",
+      "tags": [
+        "JavaScript",
+        "Angular",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "UI-UX",
+        "Scrum",
+        "English"
+      ]
+    }, {
+      "title": "Full Stack Javascript Engineer",
+      "body": "<div>Emergya</div><div>Oct 2020 – May 2021</div><div>Sevilla Area, Spain</div>",
+      "tags": [
+        "JavaScript",
+        "Angular",
+        "NodeJS",
+        "TypeScript",
+        "Express",
+        "Stencil",
+        "HTML",
+        "CSS",
+        "UI-UX",
+        "Jenkins",
+        "Scrum",
+        "Spanish"
+      ]
+    }, {
+      "title": "Business Application Engineer",
+      "body": "<div>CDS, a Hewlett Packard Enterprise company</div><div>Sep 2019 – Oct 2020</div><div>Sevilla Area, Spain</div>",
+      "tags": [
+        "JavaScript",
+        "AngularJS",
+        "NodeJS",
+        "Express",
+        "Java",
+        "HTML",
+        "CSS",
+        "SASS",
+        "UI-UX",
+        "Jenkins",
+        "Gulp",
+        "English",
+        "Spanish"
+      ]
+    }, {
+      "title": "Engineering Intern",
+      "body": "<div>Fujitsu Spain</div><div>Jun 2019 - Sep 2019</div><div>Sevilla Area, Spain</div>",
+      "description": "",
+      "tags": [
+        "Java",
+        "Spring",
+        "JavaScript",
+        "React",
+        "HTML",
+        "CSS",
+        "Jenkins",
+        "Scrum",
+        "Linux",
+        "English",
+        "Spanish"
+      ]
+    }, {
+      "title": "Engineering Intern",
+      "body": "<div>Elelog SL</div><div>Jun 2018 – Sep 2018</div> <div>Sevilla Area, Spain</div>",
+      "description": "",
+      "tags": [
+        "JavaScript",
+        "Git",
+        "Linux",
+        "UI-UX",
+        "Spanish"
+      ]
+    }],
+    "Education": [{
+      "title": "Engineer's degree, Computer Software Engineering",
+      "link": "https://www.us.es/estudiar/que-estudiar/oferta-de-grados/grado-en-ingenieria-informatica-ingenieria-del-software#edit-group-plani",
+      "body": "<div>Universidad de Sevilla</div><div>2014-2021</div>",
+      "tags": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "MongoDB",
+        "SQL",
+        "Scrum",
+        "Jenkins",
+        "Docker",
+        "Git",
+        "Linux"
+      ]
+    }, {
+      "title": "University Course on Cybersecurity",
+      "link": "https://www.escueladeempresa.com/cursos-universitarios-6-meses/informatica-tecnologia-de-la-informacion-y-robotica/curso-en-introduccion-a-la-ciberseguridad/",
+      "body": "<div>Universidad Europea Miguel de Cervantes</div><div>2019</div>",
+      "tags": [
+        "Cibersecurity",
+        "Linux"
+      ]
+    }],
+    "Licenses & Certifications": [{
+      "title": "SAFe 4 Practitioner Certification",
+      "link": "https://www.youracclaim.com/badges/ec0bd4a4-fc71-4106-bdb2-8de102f7327e/linked_in_profile",
+      "body": "<div>By Scaled Agile Inc.</div> <div>Issued Oct 2019</div> <div>Expired Oct 2020</div>",
+      "tags": [
+        "Scrum"
+      ]
+    }, {
+      "title": "Become a Front-End Web Developer",
+      "link": "https://www.linkedin.com/learning/paths/become-a-front-end-web-developer",
+      "body": "<div>By LinkedIn</div> <div>Issued Jan 2020</div>",
+      "tags": [
+        "JavaScript",
+        "UI-UX",
+        "HTML",
+        "CSS",
+        "Git",
+        "Bootstrap",
+        "SASS",
+        "React"
+      ]
+    }],
+    "Languages": [{
+      "title": "Spanish",
+      "body": "Native or bilingual proficiency",
+      "tags": ["Spanish"]
+    }, {
+      "title": "English",
+      "body": "Professional working proficiency",
+      "tags": ["English"]
+    }],
+    "Projects": [{
+      "title": "Oikometer",
+      "link": "https://dandimrod.dev/oikometer",
+      "body": "<div>Free and private personal finance webapp</div> <div>Mar 2021 – Present</div>",
+      "tags": [
+        "JavaScript",
+        "Angular",
+        "PluriDB",
+        "ChartJS",
+        "Webpack",
+        "HTML",
+        "CSS",
+        "UI-UX"
+      ],
+      "gallery": [
+        "./static/img/gallery/oikometer/Screenshot1.png",
+        "./static/img/gallery/oikometer/Screenshot2.png",
+        "./static/img/gallery/oikometer/Screenshot3.png",
+        "./static/img/gallery/oikometer/Screenshot4.png",
+        "./static/img/gallery/oikometer/Screenshot5.png"
+      ]
+    }, {
+      "title": "PluriDB",
+      "link": "https://dandimrod.dev/PluriDB",
+      "body": "<div> Modular database for the Front-End</div><div>Dec 2020 – Present</div>",
+      "tags": [
+        "JavaScript",
+        "SQL",
+        "MongoDB",
+        "IndexedDB",
+        "Webpack",
+        "NPM",
+        "HTML",
+        "CSS",
+        "UI-UX",
+        "Jenkins"
+      ],
+      "gallery": [
+        "./static/img/gallery/PluriDB/1.png",
+        "./static/img/gallery/PluriDB/2.png",
+        "./static/img/gallery/PluriDB/3.png"
+      ]
+    }, {
+      "title": "Galactinauts",
+      "body": "<div>Web space simulation game</div><div>Jun 2018 – Present</div>",
+      "tags": [
+        "JavaScript",
+        "CanvasAPI",
+        "WebRTC",
+        "IndexedDB",
+        "NodeJS",
+        "HTML",
+        "CSS",
+        "UI-UX"
+      ],
+      "gallery": [
+        "./static/img/gallery/galactinauts/1.png",
+        "./static/img/gallery/galactinauts/2.png",
+        "./static/img/gallery/galactinauts/3.png",
+        "./static/img/gallery/galactinauts/4.png"
+      ]
+    }, {
+      "title": "PostmanLocalMock",
+      "link": "https://github.com/dandimrod/PostmanLocalMock",
+      "body": "<div>Simple utility that runs a mock api out of an API using a postman collection as a base</div> <div>May 2019 – Nov 2020</div>",
+      "tags": [
+        "JavaScript",
+        "NodeJS",
+        "Express",
+        "HTML",
+        "CSS",
+        "UI-UX"
+      ],
+      "gallery": [
+        "./static/img/gallery/PostmanLocalMock/1.png"
+      ]
+    }, {
+      "title": "IndexSQL",
+      "link": "https://dandimrod.dev/IndexSQL",
+      "body": "<div>Project that simplifies the use of IndexedDB by making it compatible with SQL like sintaxis</div> <div>Jul 2019 - Dic 2020</div>",
+      "tags": [
+        "JavaScript",
+        "IndexedDB",
+        "HTML",
+        "CSS",
+        "UI-UX"
+      ],
+      "gallery": [
+        "./static/img/gallery/IndexSQL/1.png",
+        "./static/img/gallery/IndexSQL/2.png",
+        "./static/img/gallery/IndexSQL/3.png"
+      ]
+    }]
   },
   "icon": "static/img/favicon.png",
   "description": "Personal page of Daniel Diment",
@@ -253,41 +249,35 @@
   "name": "Daniel Diment",
   "bio": "Hello, my name is Daniel Diment, I'm a frontend software engineer. My interest are front-end development, UI-UX and data architecture.",
   "location": "Sweden",
-  "company": "Burt Intelligence",
-  "pages": [
-    {
-      "icon": "",
-      "text": "",
-      "link": "https://dandimrod.dev"
-    },
-    {
-      "icon": "fab fa-github",
-      "text": "GitHub",
-      "link": "https://github.com/dandimrod"
-    },
-    {
-      "icon": "fab fa-linkedin",
-      "text": "LinkedIn",
-      "link": "https://www.linkedin.com/in/daniel-diment-rodriguez/"
-    },
-    {
-      "icon": "fab fa-stack-overflow",
-      "text": "StackOverflow",
-      "link": "https://stackoverflow.com/users/9198801/daniel-diment"
-    },
-    {
-      "icon": "fas fa-envelope",
-      "text": "Contact me",
-      "link":"https://contact.do/V2xn"
-    }
-  ],
+  "company": "Upsales",
+  "pages": [{
+    "icon": "",
+    "text": "",
+    "link": "https://dandimrod.dev"
+  }, {
+    "icon": "fab fa-github",
+    "text": "GitHub",
+    "link": "https://github.com/dandimrod"
+  }, {
+    "icon": "fab fa-linkedin",
+    "text": "LinkedIn",
+    "link": "https://www.linkedin.com/in/daniel-diment-rodriguez/"
+  }, {
+    "icon": "fab fa-stack-overflow",
+    "text": "StackOverflow",
+    "link": "https://stackoverflow.com/users/9198801/daniel-diment"
+  }, {
+    "icon": "fas fa-envelope",
+    "text": "Contact me",
+    "link": "https://contact.do/V2xn"
+  }],
   "userimg": "https://avatars3.githubusercontent.com/u/28782640?s=460&amp;v=4",
-  "translate":{
-    "questionSkills":"What skills are you looking for?",
-    "downloadCV":"Download CV",
+  "translate": {
+    "questionSkills": "What skills are you looking for?",
+    "downloadCV": "Download CV",
     "resume": "Resume",
     "contactInfo": "Contact information",
     "name": "Name",
-    "coverLetter":"Cover letter"
+    "coverLetter": "Cover letter"
   }
 }
